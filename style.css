@@ -1,0 +1,59 @@
+h1 {
+    color: rgb(81, 97, 99);
+
+    text-align: center;
+
+    text-decoration: underline;
+    text-decoration-style:wavy;
+    text-decoration-thickness: 1.75px;
+    text-decoration-color: rgb(152, 198, 204);
+
+    text-shadow: 2px 2px 2px rgb(173, 231, 238);
+
+
+    opacity: 0.6;
+    margin-top: 900px;
+    margin-bottom: 20px;
+    margin-right: 300px;
+    margin-left: 800px;
+
+    font-family: "Patrick Hand SC", cursive;
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+    word-spacing: 3px;
+
+    font-size: 40px;
+}
+
+
+body{
+    background: rgb(255, 253, 252);
+}
+
+p{
+    color: rgb(49, 115, 124);
+    opacity: 0.8;
+
+    margin-bottom:600px;
+    margin-right: 300px;
+    margin-left: 900px;
+
+    font-family: "Patrick Hand", cursive;
+    line-height: 2;
+
+    font-size: 20px;
+}
+
+img {
+   width: 300px;
+   height: auto;
+
+   margin-left: 310px;
+   margin-top: -950px;
+   margin-bottom: 600px;
+
+   border-radius: 28px;
+
+   transform: rotate(-6deg);
+}
