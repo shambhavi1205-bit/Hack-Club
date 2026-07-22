@@ -28,7 +28,7 @@ h1 {
 
 
 body{
-    background: rgb(255, 253, 252);
+    background: rgb(252, 247, 244);
 }
 
 p{
@@ -42,7 +42,7 @@ p{
     font-family: "Patrick Hand", cursive;
     line-height: 2;
 
-    font-size: 20px;
+    font-size: 22px;
 }
 
 img {
@@ -50,10 +50,37 @@ img {
    height: auto;
 
    margin-left: 310px;
-   margin-top: -950px;
-   margin-bottom: 600px;
+   margin-top: -1100px;
+   margin-bottom: 625px;
 
    border-radius: 28px;
 
    transform: rotate(-6deg);
+
 }
+
+.shake-img.infinite {
+    animation: shake-animation 5s infinite reverse;
+}
+
+.shake-img:hover {
+    animation-play-state: paused;
+}
+
+@keyframes shake-animation {
+    0% { transform: translate(2px, 2px) rotate(0deg); }
+    10% { transform: translate(-2px, -3px) rotate(-1deg); }
+    20% { transform: translate(-4px, 1px) rotate(1deg); }
+    30% { transform: translate(4px, 3px) rotate(0deg); }
+    40% { transform: translate(2px, -2px) rotate(1deg); }
+    50% { transform: translate(-2px, 3px) rotate(-1deg); }
+    60% { transform: translate(-4px, 2px) rotate(0deg); }
+    70% { transform: translate(4px, 2px) rotate(-1deg); }
+    80% { transform: translate(-2px, -2px) rotate(1deg); }
+    90% { transform: translate(2px, 3px) rotate(0deg); }
+    99% { transform: translate(2px, -3px) rotate(-1deg); }
+    100% { transform: translate(2px, -1px) rotate(-0.5deg); }
+
+}
+
+
