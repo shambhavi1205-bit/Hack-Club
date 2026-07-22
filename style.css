@@ -42,16 +42,16 @@ p{
     font-family: "Patrick Hand", cursive;
     line-height: 2;
 
-    font-size: 22px;
+    font-size: 21px;
 }
 
-img {
+img.shake-img {
    width: 300px;
    height: auto;
 
    margin-left: 310px;
    margin-top: -1100px;
-   margin-bottom: 625px;
+   margin-bottom: 740px;
 
    border-radius: 28px;
 
@@ -82,5 +82,58 @@ img {
     100% { transform: translate(2px, -1px) rotate(-0.5deg); }
 
 }
+
+img.border-img {
+    width: 300px;
+    height: auto;
+
+    margin-left: -200px;
+    margin-top: -1000px;
+    margin-bottom: 690px;
+
+    transform: rotate(-6deg);
+}
+
+.border-img.infinite {
+    animation: shake-animation 5s infinite reverse;
+}
+
+.border-img:hover {
+    animation-play-state: paused;
+}
+
+img.topborder-img {
+    width: 300px;
+    height: auto;
+
+    margin-left: -520px;
+    margin-top: -1000px;
+    margin-bottom: 1010px;
+
+    transform: rotate(-186deg);
+}
+
+.topborder-img.infinite {
+    animation: shake-animation-two 5s infinite reverse;
+}
+
+.topborder-img:hover {
+    animation-play-state: paused;
+}
+
+@keyframes shake-animation-two {
+    0% { transform: translate(2px, 2px) rotate(174deg); }
+    10% { transform: translate(-2px, -3px) rotate(173deg); }
+    20% { transform: translate(-4px, 1px) rotate(175deg); }
+    30% { transform: translate(4px, 3px) rotate(174deg); }
+    40% { transform: translate(2px, -2px) rotate(175deg); }
+    50% { transform: translate(-2px, 3px) rotate(173deg); }
+    60% { transform: translate(-4px, 2px) rotate(174deg); }
+    70% { transform: translate(4px, 2px) rotate(173deg); }
+    80% { transform: translate(-2px, -2px) rotate(175deg); }
+    90% { transform: translate(2px, 3px) rotate(174deg); }
+    99% { transform: translate(2px, -3px) rotate(173deg); }
+    100% { transform: translate(2px, -1px) rotate(174.5deg); }
+
 
 
