@@ -12,7 +12,7 @@ h1 {
 
 
     opacity: 0.6;
-    margin-top: 900px;
+    margin-top: 90px;
     margin-bottom: 20px;
     margin-right: 300px;
     margin-left: 800px;
@@ -29,6 +29,8 @@ h1 {
 
 body{
     background: rgb(252, 247, 244);
+    margin: 0;
+    padding: 0;
 }
 
 p{
@@ -134,6 +136,13 @@ img.topborder-img {
     90% { transform: translate(2px, 3px) rotate(174deg); }
     99% { transform: translate(2px, -3px) rotate(173deg); }
     100% { transform: translate(2px, -1px) rotate(174.5deg); }
+}
 
+img.header-img {
+    width: 100%;
+    max-width: 1500px;
+    display: block;
+    margin: 0 auto;
 
+}
 
