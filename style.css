@@ -170,7 +170,10 @@ img.artbutton-img {
 
     margin-left: 200px;
     margin-top: -365px;
+}
 
+.artbutton-img:hover {
+    filter:drop-shadow(2px 2px 2px rgb(23, 100, 123))
 }
 
 img.musicbutton-img {
@@ -181,6 +184,10 @@ img.musicbutton-img {
     margin-top: -370px;
 }
 
+.musicbutton-img:hover {
+    filter:drop-shadow(2px 2px 2px rgb(23, 100, 123))
+}
+
 img.travelingbutton-img {
     width: 15%;
     display: inline-block;
@@ -189,11 +196,19 @@ img.travelingbutton-img {
     margin-top: -415px;
 }
 
+.travelingbutton-img:hover {
+    filter:drop-shadow(2px 2px 2px rgb(23, 100, 123))
+}
+
 img.booksbutton-img {
     width: 15%;
     display: inline-block;
 
     margin-left: 1400px;
     margin-top: -370px;
+}
+
+.booksbutton-img:hover {
+    filter:drop-shadow(2px 2px 2px rgb(23, 100, 123))
 }
 
