@@ -28,12 +28,12 @@ h1 {
 
 
 body{
-    background: rgb(252, 247, 244);
+    background: rgb(253, 252, 249);
     margin: 0;
     padding: 0;
 }
 
-p{
+p.intro{
     color: rgb(49, 115, 124);
     opacity: 0.8;
 
@@ -47,8 +47,27 @@ p{
     font-size: 21px;
 }
 
+p.buttonintro {
+    color: rgb(81, 97, 99);
+    text-shadow: 2px 2px 2px rgb(173, 231, 238);
+
+    display: inline-block;
+    margin-left: 860px;
+    margin-top: -300px;
+
+
+    font-family: "Patrick Hand SC", cursive;
+    text-transform: uppercase;
+
+    position: relative;
+    top:-500px;
+
+    font-size: 30px;
+}
+
 img.shake-img {
-   width: 300px;
+   width: 100%;
+   max-width: 300px;
    height: auto;
 
    margin-left: 310px;
@@ -143,6 +162,38 @@ img.header-img {
     max-width: 1500px;
     display: block;
     margin: 0 auto;
+}
 
+img.artbutton-img {
+    width: 15%;
+    display: block;
+
+    margin-left: 200px;
+    margin-top: -365px;
+
+}
+
+img.musicbutton-img {
+    width: 15%;
+    display: inline-block;
+
+    margin-left: 600px;
+    margin-top: -370px;
+}
+
+img.travelingbutton-img {
+    width: 15%;
+    display: inline-block;
+
+    margin-left: 1000px;
+    margin-top: -415px;
+}
+
+img.booksbutton-img {
+    width: 15%;
+    display: inline-block;
+
+    margin-left: 1400px;
+    margin-top: -370px;
 }
 
