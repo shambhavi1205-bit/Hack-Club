@@ -2,7 +2,7 @@ body {
     background: rgb(253, 252, 249);
 }
 
-h1 {
+.text-box {
     color: rgb(81, 97, 99);
 
     text-align: center;
@@ -37,10 +37,6 @@ h3.disney {
     font-size: 25px;
     margin-left:100px;
 }
-
-
-
-
 
 ul {
     color: rgb(49, 115, 124);
@@ -130,5 +126,19 @@ body {
 .home:hover {
     background-color: royalblue;
 }
+
+img.home-btn {
+    width: 7%;
+
+    margin-left: 100px;
+
+    position: relative;
+    top: -300px;
+}
+
+img.home-btn:hover {
+    filter: drop-shadow(3px 3px 3px black)
+}
+
 
 
