@@ -30,7 +30,7 @@ p.hawaii1 {
     margin-right: 150px;
     font-size: 20px;
 
-    margin-top: 60px;
+    margin-top: 50px;
 }
 
 ul.hawaiilist {
@@ -71,6 +71,8 @@ p.disney {
     font-size: 20px;
 
     margin-top: 120px;
+
+    line-height: 1.6;
 }
 
 
@@ -121,6 +123,8 @@ img.hawaii {
     margin-bottom:30px;
     margin-top:15px;
     margin-right: 90px;
+
+    border-radius: 25px;
 }
 
 img.paris {
@@ -131,6 +135,8 @@ img.paris {
     margin-bottom:30px;
     margin-top:15px;
     margin-right:90px;
+
+    border-radius: 25px;
 }
 
 img.disney {
@@ -141,6 +147,8 @@ img.disney {
     margin-bottom:30px;
     margin-top:15px;
     margin-right:90px;
+
+    border-radius: 25px;
 }
 
 .parallax {
