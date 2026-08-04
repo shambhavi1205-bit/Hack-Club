@@ -1,0 +1,283 @@
+body{
+    background: rgb(253, 252, 249);
+}
+
+.parallax {
+    background-image: url("https://sc04.alicdn.com/kf/H15b51ddf04a1484da412ca56abe60fc0H.jpg");
+
+    min-height: 100vh;
+    opacity: 0.5;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+    place-content: center;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.text-box {
+    background-color: rgb(32, 30, 30);
+
+    text-shadow: 2px 2px 2px rgb(42, 95, 102);
+
+    box-shadow: 3px 3px 3px black; 
+
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+p.intro {
+    color: rgb(49, 115, 124);
+    opacity: 0.8;
+
+    font-size: 19px;
+
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 500px;
+    margin-right: 500px;
+
+    line-height: 1.6;
+}
+
+p.sketching {
+    color: rgb(49, 115, 124);
+    opacity: 0.8;
+
+    font-size: 19px;
+
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 500px;
+    margin-right: 500px;
+
+    line-height: 1.6;
+}
+
+img.babyme {
+    width: 10%;
+    
+    margin-left: 350px;
+    margin-bottom:30px;
+    margin-top:100px;
+
+    border-radius: 10px;
+}
+
+img.bird {
+    width: 10%;
+    
+    margin-left: 100px;
+    margin-bottom:30px;
+    margin-top:25px;
+
+    border-radius: 10px;
+}
+
+img.dance {
+    width: 8.5%;
+    
+    margin-left: 100px;
+    margin-bottom:30px;
+    margin-top:25px;
+
+    border-radius: 10px;
+}
+
+img.eye {
+    width: 17.5%;
+    
+    margin-left: 100px;
+    margin-bottom:30px;
+    margin-top:25px;
+
+    border-radius: 10px;
+}
+
+a.eye {
+    margin-left: 1290px;
+
+    color: rgb(49, 115, 124);
+}
+
+a.eye:hover {
+    color: rgb(81, 97, 99);
+
+    filter: drop-shadow(1px 1px 1px rgb(185, 243, 250))
+}
+
+p.clay {
+    color: rgb(49, 115, 124);
+    opacity: 0.8;
+
+    font-size: 19px;
+
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+
+    line-height: 1.6;
+}
+
+img.claypalette {
+    width: 10.5%;
+    
+    margin-left: 380px;
+    margin-bottom:30px;
+    margin-top: 100px;
+
+    border-radius: 10px;
+}
+
+img.claypresent {
+    width: 10%;
+    
+    margin-left: 100px;
+    margin-bottom:30px;
+
+    border-radius: 10px;
+}
+
+img.clayravioli {
+    width: 11.1%;
+    
+    margin-left: 100px;
+    margin-bottom:30px;
+
+    border-radius: 10px;
+}
+
+img.claytartcat {
+    width: 11%;
+   
+    margin-left: 100px;
+    margin-bottom:30px;
+
+    border-radius: 10px;
+}
+
+p.resin {
+    color: rgb(49, 115, 124);
+    opacity: 0.8;
+
+    font-size: 19px;
+
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+    
+    line-height: 1.6;
+}
+
+img.resinbookmark {
+    width: 15%;
+  
+    margin-left: 570px;
+    margin-bottom:30px;
+    margin-top:100px;
+
+    border-radius: 10px;
+}
+
+img.resinpen {
+    width: 20%;
+    
+    margin-left: 100px;
+    margin-bottom:30px;
+
+    border-radius: 10px;
+}
+
+p.rn {
+    color: rgb(49, 115, 124);
+    opacity: 0.8;
+
+    font-size: 19px;
+
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+
+    line-height: 1.6;
+}
+
+img.jeans1 {
+    width: 10%;
+    
+    margin-left: 350px;
+    margin-bottom:30px;
+
+    position: relative;
+    top: -100px;
+
+    border-radius: 10px;
+
+    rotate: -90deg;
+}
+
+img.jeans2 {
+    width: 10%;
+  
+    margin-left: 300px;
+    margin-bottom:30px;
+
+    position: relative;
+    top: -120px;
+
+    border-radius: 10px;
+
+    rotate: -90deg;
+}
+
+img.jeans3 {
+    width: 10%;
+    
+    margin-left: 300px;
+    margin-bottom:30px;
+    margin-top:100px;
+
+    position: relative;
+    top: -100px;
+
+    border-radius: 10px;
+
+    rotate: -90deg;
+}
+
+img.home-btn {
+    width: 7%;
+
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top:-80px;
+    margin-bottom:20px;
+}
+
+img.home-btn:hover {
+    filter: drop-shadow(3px 3px 3px black)
+}
