@@ -13,3 +13,5 @@ Notes:
 Credits:
 1.W3 Schools practically helped teach me how to use html and css
 2.I used AI a little bit to figure out how to set up pages, use hackatime, put pictures in a folder, and to mainly shift the buttoms upward because I couldn't figure it out.
+3.There were many images that I got from google, especially the parallax background images, the book covers, and the places on my traveling page
+4.I used Canva for graphics on my music and home page
