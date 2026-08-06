@@ -143,7 +143,10 @@ img.header-img {
 img.artbutton-img {
     width: 15%;
 
-    margin-left: 50px;
+    margin-left: 225px;
+    position: relative;
+    top: -600px;
+    margin-bottom: 0px;
 }
 
 .artbutton-img:hover {
@@ -154,6 +157,9 @@ img.musicbutton-img {
     width: 15%;
 
     margin-left: 100px;
+    position: relative;
+    top: -600px;
+    margin-bottom: 0px;
 }
 
 .musicbutton-img:hover {
@@ -164,6 +170,9 @@ img.travelingbutton-img {
     width: 15%;
 
     margin-left: 100px;
+    position: relative;
+    top: -600px;
+    margin-bottom: 0px;
 }
 
 .travelingbutton-img:hover {
@@ -174,6 +183,9 @@ img.booksbutton-img {
     width: 15%;
 
     margin-left: 100px;
+    position: relative;
+    top: -600px;
+    margin-bottom: 0px;
 }
 
 .booksbutton-img:hover {
