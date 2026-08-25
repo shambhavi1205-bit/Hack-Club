@@ -8,10 +8,22 @@
 
     </head>
     <body>
+        <div class="container">
+            <h1>I am <span class="auto-type"></span></h1>
+        </div>
 
-        <img class="header-img" src="images/header.svg" alt="a header with Shambhavi Gupta on it">
+        <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
 
-        <h1>my first website!!!</h1>
+        <script>
+            var typed = new Typed (".auto-type", {
+                strings: ["coding", "a learner", "funny", "sketching", "a musician", "traveling", "reading", "eating", "a clarinetist", "laughing", "studying", "a saxophonist"],
+                typeSpeed: 150,
+                backSpeed: 150,
+                loop: true  
+            })
+        </script>
+
+        <h1 class="website">my first website!!!</h1>
 
         <p class="intro"> My name is Shambhavi Gupta and I am a 14 year old going into 9th grade. My hobbies include art, music, reading, and traveling. Otherwise, I also love snacking, hanging out with friends, knitting, playing tennis with my dad...and usually getting obsessed over an art project.<br><br>At school, I enjoy tech, especially building things or creating 3D printed book coins in OnShape. This summer, I wanted to learn how to code, so I joined Hack Club. Eventually, I thought creating a personal website would be fun! I am working hard to understand how HTML and CSS (I guess coding in general) works!</p>
 
