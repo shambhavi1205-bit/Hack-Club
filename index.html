@@ -1,66 +1,59 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
+        <!--linking CSS and JavaScript to the HTML file-->
         <link rel="stylesheet" href="style.css"/>
+        <script src="script.js" defer></script>
+        <!--HTML meta tags-->
+         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--typed.js script for auto typing text-->
+        <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+        <!--two imported fonts from Google fonts-->
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Patrick+Hand+SC&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap');
         </style>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
     </head>
+    
     <body>
+        <!--navbar list with links-->
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a class="active" href="#about">About</a></li>
                 <li><a href="interests.html">Interests</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="achievements.html">Achievements</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-
+        <!--container for the title and auto typing text-->
         <div class="container">
              <h1 class="title">Shambhavi Gupta</h1>
             <h1 class="type">I am <span class="auto-type"></span></h1>
         </div>
-
-        <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
-
-        <script>
-            var typed = new Typed (".auto-type", {
-                strings: ["coding", "learning", "playing tennis", "a student", "an artist", "a musician", "traveling", "reading", "a clarinetist", "laughing", "studying", "a saxophonist"],
-                typeSpeed: 150,
-                backSpeed: 150,
-                loop: true  
-            })
-        </script>
-
+        <!--about section-->
         <section id="about">
             <h1 class="website">my first website!!!</h1>
         </section>
-
+        <!--about paragraph-->
         <p class="intro"> My name is Shambhavi Gupta and I am a 14 year old going into 9th grade. My hobbies include art, music, reading, and traveling. Otherwise, I also love snacking, hanging out with friends, knitting, playing tennis with my dad...and usually getting obsessed over an art project.<br><br>At school, I enjoy tech, especially building things or creating 3D printed book coins in OnShape. This summer, I wanted to learn how to code, so I joined Hack Club. Eventually, I thought creating a personal website would be fun! I am working hard to understand how HTML and CSS (I guess coding in general) works!</p>
+        <!--MAYBE REMOVE:button intro-->
         <p class="buttonintro">Click on the buttons below to learn more about my interests!</p>
-
+        <!--div for image and corner border-->
         <div class="image-stack">
             <img class="shake-img infinite" src="images/profile.png" alt="a picture of a young girl smiling">
             <img class="border-img infinite" src="images/borderimage.svg" alt="a border squiggly for the profile image - bottom right corner">
             <img class="topborder-img infinite" src="images/borderimage.svg" alt="a border squiggly for the profile image - top left corner">
         </div>
-
+        <!--linked buttons for each interest-->
         <a href="art.html"><img class="artbutton-img" src="images/artbuttongraphic.svg" alt="button graphic at the bottom of the page with the word 'art' on it"></a>
-
         <a href="music.html"><img class="musicbutton-img" src="images/musicbuttongraphic.svg" alt="button graphic at the bottom of the page with the word 'music' on it"></a>
-
         <a href="traveling.html"><img class="travelingbutton-img" src="images/travelingbuttongraphic.svg" alt="button graphic at the bottom of the page with the word 'traveling' on it"></a>
-
         <a href="books.html"><img class="booksbutton-img" src="images/booksbuttongraphic.svg" alt="button graphic at the bottom of the page with the word 'books' on it"></a>
-
+        <!--quote section-->
         <p class="quote">"It is our choices, Harry, that show what we truly are, far more than our abilities." - Albus Dumbledore</p>
-    
+        <!--footer-->
         <footer class="footer">Created by Shambhavi Gupta</footer>
     </body>
 </html>
