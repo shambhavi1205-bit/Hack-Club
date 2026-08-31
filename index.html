@@ -12,6 +12,7 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Patrick+Hand+SC&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Stack+Sans+Headline:wght@300&display=swap');
         </style>
     </head>
     
@@ -19,40 +20,45 @@
         <!--navbar list with links-->
         <nav class="navbar">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a class="active" href="#about">About</a></li>
-                <li><a href="interests.html">Interests</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="achievements.html">Achievements</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="theme-item">
+                    <!--creates moon icon to call for dark mode-->
+                    <button id="theme" aria-label="dark mode toggle">
+                        <img id="theme-icon" src="images/moon.svg" alt="dark toggle theme">
+                    </button>
+                </li>
             </ul>
         </nav>
-        <!--container for the title and auto typing text-->
-        <div class="container">
-             <h1 class="title">Shambhavi Gupta</h1>
-            <h1 class="type">I am <span class="auto-type"></span></h1>
+
+        <!--div for the landing/home page-->
+        <div class="main">
+            <!--container for the title and auto typing text-->
+            <div id="home" class="container">
+                <h1 class="title">Shambhavi Gupta</h1>
+                <h1 class="type">I am <span class="auto-type"></span></h1>
+            </div>
         </div>
+
         <!--about section-->
         <section id="about">
-            <h1 class="website">my first website!!!</h1>
+            <h1 class="website">About ME</h1>
         </section>
         <!--about paragraph-->
         <p class="intro"> My name is Shambhavi Gupta and I am a 14 year old going into 9th grade. My hobbies include art, music, reading, and traveling. Otherwise, I also love snacking, hanging out with friends, knitting, playing tennis with my dad...and usually getting obsessed over an art project.<br><br>At school, I enjoy tech, especially building things or creating 3D printed book coins in OnShape. This summer, I wanted to learn how to code, so I joined Hack Club. Eventually, I thought creating a personal website would be fun! I am working hard to understand how HTML and CSS (I guess coding in general) works!</p>
-        <!--MAYBE REMOVE:button intro-->
-        <p class="buttonintro">Click on the buttons below to learn more about my interests!</p>
-        <!--div for image and corner border-->
-        <div class="image-stack">
-            <img class="shake-img infinite" src="images/profile.png" alt="a picture of a young girl smiling">
-            <img class="border-img infinite" src="images/borderimage.svg" alt="a border squiggly for the profile image - bottom right corner">
-            <img class="topborder-img infinite" src="images/borderimage.svg" alt="a border squiggly for the profile image - top left corner">
-        </div>
-        <!--linked buttons for each interest-->
-        <a href="art.html"><img class="artbutton-img" src="images/artbuttongraphic.svg" alt="button graphic at the bottom of the page with the word 'art' on it"></a>
-        <a href="music.html"><img class="musicbutton-img" src="images/musicbuttongraphic.svg" alt="button graphic at the bottom of the page with the word 'music' on it"></a>
-        <a href="traveling.html"><img class="travelingbutton-img" src="images/travelingbuttongraphic.svg" alt="button graphic at the bottom of the page with the word 'traveling' on it"></a>
-        <a href="books.html"><img class="booksbutton-img" src="images/booksbuttongraphic.svg" alt="button graphic at the bottom of the page with the word 'books' on it"></a>
-        <!--quote section-->
-        <p class="quote">"It is our choices, Harry, that show what we truly are, far more than our abilities." - Albus Dumbledore</p>
+       
+        <h1 id="interests">Interests</h1>
+
+        <h1 id="projects">Projects</h1>
+
+        <h1 id="achievements">Achievements</h1>
+
+        <h1 id="contact">Contact</h1>
+
         <!--footer-->
         <footer class="footer">Created by Shambhavi Gupta</footer>
     </body>

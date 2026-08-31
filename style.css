@@ -1,7 +1,14 @@
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /*allows the anchor links to scroll smoothly to sections*/
+    scroll-padding-top: 90px; /*leaves 90px of space above the anchor*/
 }
 
+#home,
+section[id] {
+    scroll-margin-top: 90px; /*leaves 90px of space above all anchors*/
+}
+
+/*sets the background color and topographic img*/
 body{
     margin: 0;
     padding: 0;
@@ -13,12 +20,42 @@ body{
     background-position: top left;
 }
 
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(218, 218, 218);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom,rgb(225, 158, 198), rgb(193, 146, 215), rgb(77, 196, 211), rgb(78, 219, 212))
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom,rgb(169, 118, 149), rgb(123, 92, 137), rgb(60, 152, 164), rgb(61, 171, 166))
+}
+
+.dark-mode {
+    background-color: black;
+    color: rgb(121, 173, 180);
+}
+
+/*styles the navbar*/
+.navbar {
+    position: sticky; /*keeps the navbar throughout the entire page*/
+    top: 10px; /*little space from very top*/
+    z-index: 1000; /*keeps navbar above everything else*/
+    backdrop-filter: blur(10px); /*blurs everything below the navbar*/
+    -webkit-backdrop-filter: blur(10px); /*for Safari support*/
+}
+
 .navbar ul{
     list-style-type: none;
     background-color: rgb(131, 200, 222);
     opacity: 0.4;
     padding: 0;
-    margin: 0 auto;
+    margin: 10px auto 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -27,33 +64,67 @@ body{
 .navbar a{
     color: white;
     text-decoration: none;
-    padding: 25px 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
     display: block;
     text-align: center;
-    font-family: "Patrick Hand SC", cursive;
-    font-weight: bold;
+    font-family: "Stack Sans";
     font-size: 20px;
+    font-weight: bold;
     cursor: pointer;
 }
 
-.navbar li:hover,
+.navbar li:not(.theme-item):hover /*does not change the color of the moon icon*/,
 .navbar a:hover{
-    background-color: rgb(0, 0, 0);
-    opacity: 0.8;
-    outline: 2px solid white;
-    outline-offset: -2px;
+    color: rgb(70, 139, 158);
 }
 
 .navbar li{
     flex: 0 1 auto;
 }
 
-h1.title {
+.main {
+    min-height: calc(100vh - 66px);
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar li.theme-item {
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+}
+
+#theme {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*styles the moon icon for dark mode*/
+#theme-icon {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin-left: 5rem;
+}
+
+/*moon icon gets larger on hover*/
+#theme-icon:hover{
+    transform: scale(1.2);
+}
+
+/*title styling --> Shambhavi Gupta*/
+.title {
     font-size: 6.25rem;
     font-family: "Stack Sans Headline", sans-serif;
     font-weight: 1000;
-    position: relative;
-    top: 3.125rem;
     background: linear-gradient(-90deg, rgb(169, 118, 149), rgb(123, 92, 137), rgb(60, 152, 164), rgb(61, 171, 166), rgb(169, 118, 149));
     background-clip: text;
     color: transparent;
@@ -72,24 +143,24 @@ h1.title {
 
 .container {
     width: 100%;
-    height: 100vh;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative; 
-    bottom: 40px;
 }
 span {
     color: rgb(121, 173, 180);
     text-shadow: 2px 2px 2px rgb(192, 247, 253);
 }
 
-h1.type {
+/*auto typing text*/
+.type {
     font-size: 40px;
     font-family: "Stack Sans Headline";
     font-weight: 100;
-    
+    position: relative;
+    top: -50px;
 }
 
 h1.website {
@@ -131,162 +202,6 @@ p.intro{
     line-height: 2;
 
     font-size: 21px;
-}
-
-p.buttonintro {
-    color: rgb(81, 97, 99);
-    text-shadow: 2px 2px 2px rgb(173, 231, 238);
-
-    display: inline-block;
-    margin-left: 860px;
-    margin-top: -300px;
-
-    font-family: "Patrick Hand SC", cursive;
-    text-transform: uppercase;
-
-    position: relative;
-    top:-500px;
-
-    font-size: 30px;
-}
-
-img.shake-img {
-   width: 100%;
-   max-width: 300px;
-   height: auto;
-
-   margin-left: 310px;
-   margin-top: -1100px;
-   margin-bottom: 740px;
-
-   border-radius: 28px;
-   transform: rotate(-6deg);
-}
-
-.shake-img.infinite {
-    animation: shake-animation 5s infinite ease-in-out;
-}
-
-.shake-img:hover {
-    animation-play-state: paused;
-}
-
-@keyframes shake-animation {
-    0%, 100% { transform: rotate(-6deg) translate(0, 0); }
-    50% { transform: rotate(-5deg) translate(2px, 2px); }
-}
-
-img.border-img {
-    width: 300px;
-    height: auto;
-
-    margin-left: -200px;
-    margin-top: -1000px;
-    margin-bottom: 690px;
-
-    transform: rotate(-6deg);
-}
-
-.border-img.infinite {
-    animation: shake-animation 5s infinite ease-in-out;
-}
-
-.border-img:hover {
-    animation-play-state: paused;
-}
-
-img.topborder-img {
-    width: 300px;
-    height: auto;
-
-    margin-left: -520px;
-    margin-top: -1000px;
-    margin-bottom: 1010px;
-
-    transform: rotate(-186deg);
-}
-
-.topborder-img.infinite {
-    animation: shake-animation-two 5s infinite ease-in-out;
-}
-
-.topborder-img:hover {
-    animation-play-state: paused;
-}
-
-@keyframes shake-animation-two {
-    0%, 100% { transform: rotate(-186deg) translate(0, 0); }
-    50% { transform: rotate(-185deg) translate(2px, -2px); }
-}
-
-img.artbutton-img {
-    width: 15%;
-
-    margin-left: 225px;
-    position: relative;
-    top: -600px;
-    margin-bottom: 0px;
-}
-
-.artbutton-img:hover {
-    filter:drop-shadow(2px 2px 2px rgb(23, 100, 123))
-}
-
-img.musicbutton-img {
-    width: 15%;
-
-    margin-left: 100px;
-    position: relative;
-    top: -600px;
-    margin-bottom: 0px;
-}
-
-.musicbutton-img:hover {
-    filter:drop-shadow(2px 2px 2px rgb(23, 100, 123))
-}
-
-img.travelingbutton-img {
-    width: 15%;
-
-    margin-left: 100px;
-    position: relative;
-    top: -600px;
-    margin-bottom: 0px;
-}
-
-.travelingbutton-img:hover {
-    filter:drop-shadow(2px 2px 2px rgb(23, 100, 123))
-}
-
-img.booksbutton-img {
-    width: 15%;
-
-    margin-left: 100px;
-    position: relative;
-    top: -600px;
-    margin-bottom: 0px;
-}
-
-.booksbutton-img:hover {
-    filter:drop-shadow(2px 2px 2px rgb(23, 100, 123))
-}
-
-p.quote {
-    font-size: 40px;
-    line-height: 2;
-    
-    margin-left: 500px;
-    margin-right: 500px;
-    margin-top: -420px;
-
-    text-align: center;
-
-    font-family: "Patrick Hand SC", cursive;
-    text-transform: uppercase;
-
-    text-shadow: 2px 2px 2px rgb(173, 231, 238);
-    color: rgb(81, 97, 99);
-    opacity: 0.6;
 }
 
 .footer {
