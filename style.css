@@ -1,3 +1,46 @@
+:root { /*whole CSS color palette*/
+    --bg-body: rgb(253, 252, 249); /*body bg*/
+    --scrollbar: rgb(218, 218, 218); /*scrollbar track*/
+    --scrollbar-base-1: rgb(169, 118, 149); /*scrollbar base color 1*/
+    --scrollbar-base-2: rgb(123, 92, 137); /*scrollbar base color 2*/
+    --scrollbar-base-3: rgb(60, 152, 164); /*scrollbar base color 3*/
+    --scrollbar-base-4: rgb(61, 171, 166); /*scrollbar base color 4*/
+    --scrollbar-hover-1: rgb(225, 158, 198); /*scrollbar hover color 1*/
+    --scrollbar-hover-2: rgb(193, 146, 215); /*scrollbar hover color 2*/
+    --scrollbar-hover-3: rgb(77, 196, 211); /*scrollbar hover color 3*/
+    --scrollbar-hover-4: rgb(78, 219, 212); /*scrollbar hover color 4*/
+    --bg-navbar: rgb(131, 200, 222); /*navbar*/
+    --navbar-text: white; /*navbar text headings/links*/
+    --navbar-text-hover: rgb(70, 139, 158); /*navbar text color on hover*/
+    --auto-typing-text: rgb(121, 173, 180); /*auto typing text base*/
+    --auto-typing-shadow: rgb(192, 247, 253); /*auto typing text shadow*/
+    --title: rgb(169, 118, 149), rgb(123, 92, 137), rgb(60, 152, 164), rgb(61, 171, 166), rgb(169, 118, 149); /*title gradient*/
+}
+
+.darkmode { /*color palette for dark mode*/
+    background-image: url(images/darkmodebg.svg);
+    --bg-body: black; /*body bg*/
+    --scrollbar: rgb(218, 218, 218); /*scrollbar track*/
+    --scrollbar-base-1: rgb(169, 118, 149); /*scrollbar base color 1*/
+    --scrollbar-base-2: rgb(123, 92, 137); /*scrollbar base color 2*/
+    --scrollbar-base-3: rgb(60, 152, 164); /*scrollbar base color 3*/
+    --scrollbar-base-4: rgb(61, 171, 166); /*scrollbar base color 4*/
+    --scrollbar-hover-1: rgb(225, 158, 198); /*scrollbar hover color 1*/
+    --scrollbar-hover-2: rgb(193, 146, 215); /*scrollbar hover color 2*/
+    --scrollbar-hover-3: rgb(77, 196, 211); /*scrollbar hover color 3*/
+    --scrollbar-hover-4: rgb(78, 219, 212); /*scrollbar hover color 4*/
+    --bg-navbar: rgb(131, 200, 222); /*navbar*/
+    --navbar-text: white; /*navbar text*/
+    --navbar-text-hover: rgb(70, 139, 158); /*navbar text color on hover*/
+    --auto-typing-text: rgb(121, 173, 180); /*auto typing text base*/
+    --auto-typing-shadow: rgb(192, 247, 253); /*auto typing text shadow*/
+    --title: rgb(169, 118, 149), rgb(123, 92, 137), rgb(60, 152, 164), rgb(61, 171, 166), rgb(169, 118, 149); /*title gradient*/
+}
+
+.darkmode .type { /*"I am" text color in dark mode*/
+    color: white;
+}
+
 html {
     scroll-behavior: smooth; /*allows the anchor links to scroll smoothly to sections*/
     scroll-padding-top: 90px; /*leaves 90px of space above the anchor*/
@@ -13,7 +56,7 @@ body{
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-color: rgb(253, 252, 249);
+    background-color: var(--bg-body);
     background-image: url('images/bg.svg');
     background-repeat: repeat;
     background-size: auto;
@@ -25,20 +68,16 @@ body{
 }
 
 ::-webkit-scrollbar-track {
-    background: rgb(218, 218, 218);
+    background: var(--scrollbar);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom,rgb(225, 158, 198), rgb(193, 146, 215), rgb(77, 196, 211), rgb(78, 219, 212))
+    background: linear-gradient(to bottom, var(--scrollbar-base-1), var(--scrollbar-base-2), var(--scrollbar-base-3), var(--scrollbar-base-4));
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to bottom,rgb(169, 118, 149), rgb(123, 92, 137), rgb(60, 152, 164), rgb(61, 171, 166))
-}
-
-.dark-mode {
-    background-color: black;
-    color: rgb(121, 173, 180);
+    background: linear-gradient(to bottom, var(--scrollbar-hover-1), var(--scrollbar-hover-2), var(--scrollbar-hover-3), var(--scrollbar-hover-4));
+    opacity: 0.1;
 }
 
 /*styles the navbar*/
@@ -52,17 +91,19 @@ body{
 
 .navbar ul{
     list-style-type: none;
-    background-color: rgb(131, 200, 222);
-    opacity: 0.4;
+    background-color: rgba(131, 200, 222, 0.4);
+    opacity: 1;
     padding: 0;
     margin: 10px auto 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    backdrop-filter: blur(10px); /*blurs everything below the navbar*/
+    -webkit-backdrop-filter: blur(10px); /*for Safari support*/
 }
 
 .navbar a{
-    color: white;
+    color: var(--navbar-text);
     text-decoration: none;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -78,7 +119,7 @@ body{
 
 .navbar li:not(.theme-item):hover /*does not change the color of the moon icon*/,
 .navbar a:hover{
-    color: rgb(70, 139, 158);
+    color: var(--navbar-text-hover);
 }
 
 .navbar li{
@@ -97,6 +138,33 @@ body{
     align-items: center;
 }
 
+#theme-switch { /*moon and sun icons*/
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-switch img:last-child { /*sun icon will not be visible in default*/
+    display: none;
+}
+
+.darkmode #theme-switch img:first-child { /*moon icon will not be visible in dark mode*/
+    display: none;
+}
+
+.darkmode #theme-switch img:last-child { /*sun icon will be visible in dark mode*/
+    display: block;
+}
+
+/*
 #theme {
     background: transparent;
     border: none;
@@ -107,7 +175,7 @@ body{
     justify-content: center;
 }
 
-/*styles the moon icon for dark mode*/
+/*styles the moon icon for dark mode
 #theme-icon {
     width: 50px;
     height: auto;
@@ -115,7 +183,7 @@ body{
     margin-left: 5rem;
 }
 
-/*moon icon gets larger on hover*/
+/*moon icon gets larger on hover`
 #theme-icon:hover{
     transform: scale(1.2);
 }
@@ -125,7 +193,7 @@ body{
     font-size: 6.25rem;
     font-family: "Stack Sans Headline", sans-serif;
     font-weight: 1000;
-    background: linear-gradient(-90deg, rgb(169, 118, 149), rgb(123, 92, 137), rgb(60, 152, 164), rgb(61, 171, 166), rgb(169, 118, 149));
+    background: linear-gradient(-90deg, var(--title));
     background-clip: text;
     color: transparent;
     background-size: 200% auto;
@@ -149,9 +217,12 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+
 span {
-    color: rgb(121, 173, 180);
-    text-shadow: 2px 2px 2px rgb(192, 247, 253);
+    color: var(--auto-typing-text);
+    text-shadow: 2px 2px 2px var(--auto-typing-shadow);
+    font-weight: 300;
 }
 
 /*auto typing text*/
@@ -163,6 +234,7 @@ span {
     top: -50px;
 }
 
+/*
 h1.website {
     color: rgb(81, 97, 99);
 
