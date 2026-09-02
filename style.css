@@ -13,7 +13,7 @@
     --navbar-text: white; /*navbar text headings/links*/
     --navbar-text-hover: rgb(70, 139, 158); /*navbar text color on hover*/
     --auto-typing-text: rgb(121, 173, 180); /*auto typing text base*/
-    --auto-typing-shadow: rgb(192, 247, 253); /*auto typing text shadow*/
+
     --title: rgb(169, 118, 149), rgb(123, 92, 137), rgb(60, 152, 164), rgb(61, 171, 166), rgb(169, 118, 149); /*title gradient*/
 }
 
@@ -142,14 +142,24 @@ body{
     height: 50px;
     width: 50px;
     padding: 0;
-    border-radius: 50%;
     background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 20px;
-    right: 20px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/*turns the sun and moon icons white*/
+#theme-switch img {
+    filter: brightness(0) invert(1);
+}
+
+#theme-switch:hover {
+    transform: scale(1.4);
+    cursor: pointer;
 }
 
 #theme-switch img:last-child { /*sun icon will not be visible in default*/
@@ -164,31 +174,6 @@ body{
     display: block;
 }
 
-/*
-#theme {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/*styles the moon icon for dark mode
-#theme-icon {
-    width: 50px;
-    height: auto;
-    display: block;
-    margin-left: 5rem;
-}
-
-/*moon icon gets larger on hover`
-#theme-icon:hover{
-    transform: scale(1.2);
-}
-
-/*title styling --> Shambhavi Gupta*/
 .title {
     font-size: 6.25rem;
     font-family: "Stack Sans Headline", sans-serif;
@@ -221,7 +206,6 @@ body{
 
 span {
     color: var(--auto-typing-text);
-    text-shadow: 2px 2px 2px var(--auto-typing-shadow);
     font-weight: 300;
 }
 
@@ -234,6 +218,75 @@ span {
     top: -50px;
 }
 
+/*the about glass card*/
+.about {
+    width: 700px;
+    margin-top: 20px;
+    margin-right: 200px; 
+    margin-bottom: 20px; 
+    margin-left: auto;
+    background-color: white 0.4;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px); /*blurs everything below the about section*/
+    opacity: 1;
+     transition: transform 0.3s ease-in-out;
+}
+
+/*the paragraph introducing me*/
+.about p {
+    font-family: "Stack Sans";
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.about:hover {
+    transform: scale(1.2);
+   
+}
+
+/*about section heading*/
+.about-header{
+    font-size: 3rem;
+    font-family: "Stack Sans Headline", sans-serif;
+    font-weight: 1000;
+    background: linear-gradient(-90deg, var(--title));
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+}
+
+.modal-content {
+    background-color: var(--bg-body);
+    margin: 5% auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 600px;
+
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: var(--scrollbar);
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--scrollbar-base-1), var(--scrollbar-base-2), var(--scrollbar-base-3), var(--scrollbar-base-4));
+}
 /*
 h1.website {
     color: rgb(81, 97, 99);

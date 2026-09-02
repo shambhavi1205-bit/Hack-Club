@@ -28,8 +28,9 @@
                 <li><a href="#contact">Contact</a></li>
                 <li class="theme-item">
                     <!--creates moon icon to call for dark mode-->
-                    <button id="theme" aria-label="dark mode toggle">
-                        <img id="theme-icon" src="images/moon.svg" alt="dark toggle theme">
+                    <button id="theme-switch" aria-label="dark mode toggle">
+                        <img src="images/moon.svg">
+                        <img src="images/sun.svg">
                     </button>
                 </li>
             </ul>
@@ -44,16 +45,29 @@
             </div>
         </div>
 
-        <!--about section-->
-        <section id="about">
-            <h1 class="website">About ME</h1>
-        </section>
-        <!--about paragraph-->
-        <p class="intro"> My name is Shambhavi Gupta and I am a 14 year old going into 9th grade. My hobbies include art, music, reading, and traveling. Otherwise, I also love snacking, hanging out with friends, knitting, playing tennis with my dad...and usually getting obsessed over an art project.<br><br>At school, I enjoy tech, especially building things or creating 3D printed book coins in OnShape. This summer, I wanted to learn how to code, so I joined Hack Club. Eventually, I thought creating a personal website would be fun! I am working hard to understand how HTML and CSS (I guess coding in general) works!</p>
-       
-        <h1 id="interests">Interests</h1>
+        <!--about section header-->
+        <h1 class="about-header">About Me</h1>
+        <!--about section content-->
+        <div id="about" class="about">
+            <p> Hiiiii!!! My name is Shambhavi Gupta and I am in 9th grade. I am not familiar with coding and and I am building my expertise. With this personal website, I have learned the basics of HTML, CSS, and a little bit of JavaScript. I am interested in web development and I am excited to see where it takes me! Outside of school, I work hard to improve my skills in tennis, at the clarinet, and art. In my spare time, I like playing with younger kids, reading a book, and listening to music. I hope to continue learning about coding and growing in this area.</p>
+        </div>
 
-        <h1 id="projects">Projects</h1>
+        <div id="interests">
+            <h1>Interests</h1>
+
+            <!--clickable card that opens up modal-->
+            <div id="myCard" class="card">
+                <h2>Music</h2>
+                <p>Click to learn more about my love for music!</p>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Music</h2>
+                    <p>I love music! I have been playing clarinet for 4 years, and saxophone for a year. Alongside playing these instruments in band and jazz band, I also enjoy singing in choir. My favorite genre is pop music, as I listen to artists such as Taylor Swift, Olivia Rodrigo, Tate McRae, and Demi Lovato.</p>
+                </div>
+            </div>
+        </div>
 
         <h1 id="achievements">Achievements</h1>
 
