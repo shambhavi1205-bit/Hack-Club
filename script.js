@@ -63,29 +63,39 @@ themeSwitch.addEventListener("click", () => {
    }
 })
 
-//Modal code for "interests"
+//Modal code for "music"
 
 //get the modal
-let modal = document.getElementById("myModal");
+let modal = document.getElementById("modalMusic");
 
 //get the card element that opens the modal
-let card = document.getElementById("myCard");
+let card = document.getElementById("musicCard");
 
 //get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
+let span = document.querySelector(".closeMusic");
 
 //when the user clicks on the card, open the modal
-card.onclick = function() {
+//when the user clicks on the card element, run the code inside the curly braces
+card.onclick = 
+//a block of code that stays dormant until triggered by a click
+function() {
+   //gets the CSS styling of "modal" and changes it to a block so that the modal can be seen
    modal.style.display = "block";
 }
 
 //when the user clicks on <span> (x), close the modal
+//when the user clicks on the x, run the code inside the curly braces
 span.onclick = function() {
+   //the CSS display returns to none so that the modal is not seen
    modal.style.display = "none";
 }
 
 //when the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+//listens for a click anywhere on the entire browser window
+window.onclick = 
+//gives us an event object that contains information about the click
+function(event) {
+   //"==" checks if the target of the click is the modal; if so, the modal closes
    if (event.target == modal) {
       modal.style.display = "none";
    }

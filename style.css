@@ -13,8 +13,9 @@
     --navbar-text: white; /*navbar text headings/links*/
     --navbar-text-hover: rgb(70, 139, 158); /*navbar text color on hover*/
     --auto-typing-text: rgb(121, 173, 180); /*auto typing text base*/
-
     --title: rgb(169, 118, 149), rgb(123, 92, 137), rgb(60, 152, 164), rgb(61, 171, 166), rgb(169, 118, 149); /*title gradient*/
+    --card-bg: white 0.4; /*about card bg*/
+    --border-box: black; /*card borders*/
 }
 
 .darkmode { /*color palette for dark mode*/
@@ -35,6 +36,8 @@
     --auto-typing-text: rgb(121, 173, 180); /*auto typing text base*/
     --auto-typing-shadow: rgb(192, 247, 253); /*auto typing text shadow*/
     --title: rgb(169, 118, 149), rgb(123, 92, 137), rgb(60, 152, 164), rgb(61, 171, 166), rgb(169, 118, 149); /*title gradient*/
+    --card-bg: white 0.4; /*about card bg*/
+    --border-box: white; /*card borders*/
 }
 
 .darkmode .type { /*"I am" text color in dark mode*/
@@ -43,7 +46,7 @@
 
 html {
     scroll-behavior: smooth; /*allows the anchor links to scroll smoothly to sections*/
-    scroll-padding-top: 90px; /*leaves 90px of space above the anchor*/
+    scroll-padding-top: 50px; /*leaves 90px of space above the anchor*/
 }
 
 #home,
@@ -78,6 +81,7 @@ body{
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(to bottom, var(--scrollbar-hover-1), var(--scrollbar-hover-2), var(--scrollbar-hover-3), var(--scrollbar-hover-4));
     opacity: 0.1;
+    cursor: pointer;
 }
 
 /*styles the navbar*/
@@ -111,7 +115,7 @@ body{
     padding-right: 35px;
     display: block;
     text-align: center;
-    font-family: "Stack Sans";
+    font-family: "Comfortaa", sans-serif;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
@@ -222,11 +226,78 @@ span {
 .about {
     width: 700px;
     margin-top: 20px;
-    margin-right: 200px; 
+    margin-right: auto; 
     margin-bottom: 20px; 
-    margin-left: auto;
-    background-color: white 0.4;
-    border: 1px solid black;
+    margin-left: 200px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-box);
+    border-radius: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 2.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px); /*blurs everything below the about section*/
+    opacity: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+/*the paragraph introducing me*/
+.about p {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 10px;
+    color: var(--scrollbar-base-1);
+}
+
+.about:hover {
+    transform: scale(1.05);
+   
+}
+
+/*about section heading*/
+.about-header{
+    width: 762px;
+    margin: 20px auto 0 200px;
+    font-size: 3rem;
+    font-family: "Stack Sans Headline", sans-serif;
+    font-weight: 1000;
+    background: linear-gradient(-90deg, var(--title));
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    text-align: center;
+}
+
+/*interests section heading*/
+.interests-header {
+    width: 762px;
+    margin: 20px auto 0 200px;
+    font-size: 3rem;
+    font-family: "Stack Sans Headline", sans-serif;
+    font-weight: 1000;
+    background: linear-gradient(-90deg, var(--title));
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    text-align: center;
+}
+
+.glass-card {
+    align-items: center;
+    width: 400px;
+    margin-top: 20px;
+    margin-right: auto; 
+    margin-bottom: 50px; 
+    margin-left: 200px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-box);
     border-radius: 20px;
     padding-right: 30px;
     padding-left: 30px;
@@ -238,42 +309,92 @@ span {
     align-items: center;
     backdrop-filter: blur(2px); /*blurs everything below the about section*/
     opacity: 1;
-     transition: transform 0.3s ease-in-out;
 }
 
-/*the paragraph introducing me*/
-.about p {
-    font-family: "Stack Sans";
-    font-weight: bold;
-    line-height: 1.5;
-    margin-top: 10px;
-}
-
-.about:hover {
-    transform: scale(1.2);
-   
-}
-
-/*about section heading*/
-.about-header{
-    font-size: 3rem;
+.glass-card h2 {
     font-family: "Stack Sans Headline", sans-serif;
-    font-weight: 1000;
-    background: linear-gradient(-90deg, var(--title));
-    background-clip: text;
-    color: transparent;
-    background-size: 200% auto;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--scrollbar-base-2);
 }
 
+.glass-card p{
+    font-family: "Comfortaa", sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--scrollbar-base-1);
+}
+
+/*when the user hovers over the text to get the modal*/
+.glass-card p:hover {
+    color: var(--navbar-text-hover);
+    cursor: pointer;
+}
+
+.modal-music {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1001;
+    padding-top: 5rem;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+/*the modal content*/
 .modal-content {
     background-color: var(--bg-body);
     margin: 5% auto;
     padding: 2rem;
-    width: 80%;
-    max-width: 600px;
-
-    max-height: 80vh;
+    width: 100%;
+    max-width: 1200px;
+    max-height: 60vh;
+    border: 1px solid var(--border-box);
+    border-radius: 12px;
+    position: relative;
+    top: -50px;
     overflow-y: auto;
+}
+
+.modal-content h1 {
+    font-family: "Stack Sans Headline", sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--scrollbar-base-2);
+    padding-top: 50px;
+}
+
+.modal-content p {
+    color: var(--scrollbar-base-1);
+    font-family: "Comfortaa", sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 2.5;
+    padding: 2px 100px 50px 50px;
+}
+
+/*close button on modal*/
+.closeMusic {
+    float: right;
+    color: var(--navbar-text-hover);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+.closeMusic:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+    font-weight: bold;
 }
 
 .modal-content::-webkit-scrollbar {
@@ -287,6 +408,30 @@ span {
 .modal-content::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, var(--scrollbar-base-1), var(--scrollbar-base-2), var(--scrollbar-base-3), var(--scrollbar-base-4));
 }
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, var(--scrollbar-hover-1), var(--scrollbar-hover-2), var(--scrollbar-hover-3), var(--scrollbar-hover-4));
+    opacity: 0.1;
+    cursor: pointer;
+}
+
+.spotify {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.spotify iframe {
+    width: 70%;
+    height: 352px;
+    margin-top: 100px;
+    position: relative;
+    top: -100px;
+}
+
 /*
 h1.website {
     color: rgb(81, 97, 99);

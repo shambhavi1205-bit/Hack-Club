@@ -13,6 +13,7 @@
             @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Patrick+Hand+SC&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Stack+Sans+Headline:wght@300&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Stack+Sans+Headline:wght@300&display=swap');
         </style>
     </head>
     
@@ -49,22 +50,78 @@
         <h1 class="about-header">About Me</h1>
         <!--about section content-->
         <div id="about" class="about">
-            <p> Hiiiii!!! My name is Shambhavi Gupta and I am in 9th grade. I am not familiar with coding and and I am building my expertise. With this personal website, I have learned the basics of HTML, CSS, and a little bit of JavaScript. I am interested in web development and I am excited to see where it takes me! Outside of school, I work hard to improve my skills in tennis, at the clarinet, and art. In my spare time, I like playing with younger kids, reading a book, and listening to music. I hope to continue learning about coding and growing in this area.</p>
+            <p> Hi, everyone! My name is Shambhavi Gupta and I am in 9th grade. I am not familiar with coding and and I am building my expertise. With this personal website, I have learned the basics of HTML, CSS, and a little bit of JavaScript. I am interested in web development and I am excited to see where it takes me! Outside of school, I work hard to improve my skills in tennis, at the clarinet, and art. In my spare time, I like playing with younger kids, reading a book, and listening to music. I hope to continue learning about coding and growing in this area.</p>
         </div>
 
         <div id="interests">
-            <h1>Interests</h1>
+            <h1 class="interests-header">Interests</h1>
 
-            <!--clickable card that opens up modal-->
-            <div id="myCard" class="card">
+            <!--clickable music card that opens up music modal-->
+            <div id="musicCard" class="glass-card">
                 <h2>Music</h2>
-                <p>Click to learn more about my love for music!</p>
+                <p>Music is a passion I am working on developing. I think it helps me express myself and connect with others over a beautiful melody. My main instrument is the clarinet, but I also play tenor saxophone and I am learning to play guitar a tiny bit.</p>
+            </div>
 
-            <div id="myModal" class="modal">
+            <div id="modalMusic" class="modal-music">
                 <div class="modal-content">
-                    <span class="close">&times;</span>
+                    <span class="closeMusic">&times;</span>
+                    <h1>Music</h1>
+                    <p>Music is one of my favorite getaways! I started playing the clarinet in 5th grade when I had the option to choose 
+                        an instrument. Before this opportunity, I had no experience with music and I struggled to grasp the concept
+                        of notes in music class! Soon enough, I was going to my first NYSSMA, where I recieved an outstanding on my solo!<br><br>
+                        Going into 6th grade, I went strong into band with my clarinet, and also decided to join choir, which I loved immediately.
+                        My choir sang in our area's Choir Festival, which was a truly amazing experience. In 7th grade, I also auditioned
+                        for my school's select choir, which I was accepted into.<br><br>
+                        For me, 8th grade was my most musicaly year. I picked up tenor saxophone because it was so similar to clarinet.
+                        With it, I played in jazz band and was also accepted into my area's select jazz band, which was soooo fun and exciting!
+                        With my clarinet, I was accepted into my area's select band, and I played outside of school in a great instrument organization.<br><br>
+                        Even though I love instruments, I also like singing just for fun and listening to music. My favorite genre is pop music, as I listen to artists 
+                        such as Taylor Swift, Olivia Rodrigo, Tate McRae, and Demi Lovato (ofc there are more!). Take a look below at some of my Spotify playlists!!!</p>
+                    <div class="spotify">
+                        <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/playlist/5yfyXp86CzsWFBLhazsYyz?utm_source=generator&si=5bdb3f032518448d" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/playlist/2XRkcRXCmcxph8xBhBeBCE?utm_source=generator&si=125e341a1fe74c2b" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1fnbCpymXUmzuJQ0CtxvdR?utm_source=generator&si=4be87766e2ce4260" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    
+            <!--clickable art card that opens up art modal
+                <div id="musicCard" class="glass-card">
                     <h2>Music</h2>
-                    <p>I love music! I have been playing clarinet for 4 years, and saxophone for a year. Alongside playing these instruments in band and jazz band, I also enjoy singing in choir. My favorite genre is pop music, as I listen to artists such as Taylor Swift, Olivia Rodrigo, Tate McRae, and Demi Lovato.</p>
+                    <p>Click to learn more about my love for music!</p>
+                </div>
+
+                <div id="modalMusic" class="modal-music">
+                    <div class="modal-content">
+                        <span class="closeMusic">&times;</span>
+                        <h1>Music</h1>
+                        <p>Music is one of my favorite getaways! I started playing the clarinet in 5th grade when I had the option to choose 
+                            an instrument. Before this opportunity, I had no experience with music and I struggled to grasp the concept
+                            of notes in music class! Soon enough, I was going to my first NYSSMA, where I recieved an outstanding on my solo!<br><br>
+                            Going into 6th grade, I went strong into band with my clarinet, and also decided to join choir, which I loved immediately.
+                            My choir sang in our area's Choir Festival, which was a truly amazing experience. In 7th grade, I also auditioned
+                            for my school's select choir, which I was accepted into.<br><br>
+                            For me, 8th grade was my most musicaly year. I picked up tenor saxophone because it was so similar to clarinet.
+                            With it, I played in jazz band and was also accepted into my area's select jazz band, which was soooo fun and exciting!
+                            With my clarinet, I was accepted into my area's select band, and I played outside of school in a great instrument organization.<br><br>
+                            Even though I love instruments, I also like singing just for fun and listening to music. My favorite genre is pop music, as I listen to artists 
+                            such as Taylor Swift, Olivia Rodrigo, Tate McRae, and Demi Lovato (ofc there are more!). Take a look below at some of my Spotify playlists!!!</p>
+                    </div>
+                        <div class="spotify">
+                            <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/playlist/5yfyXp86CzsWFBLhazsYyz?utm_source=generator&si=5bdb3f032518448d" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                            <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/playlist/2XRkcRXCmcxph8xBhBeBCE?utm_source=generator&si=125e341a1fe74c2b" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1fnbCpymXUmzuJQ0CtxvdR?utm_source=generator&si=4be87766e2ce4260" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
+    
+                        
+                        
+                    
+                    <!--
+                    <div class="scroll-top">
+
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -73,7 +130,7 @@
 
         <h1 id="contact">Contact</h1>
 
-        <!--footer-->
+        <!--
         <footer class="footer">Created by Shambhavi Gupta</footer>
     </body>
 </html>
