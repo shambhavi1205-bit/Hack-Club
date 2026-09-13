@@ -244,6 +244,7 @@ span {
     backdrop-filter: blur(2px); /*blurs everything below the about section*/
     opacity: 1;
     transition: transform 0.3s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /*the paragraph introducing me*/
@@ -289,26 +290,41 @@ span {
     text-align: center;
 }
 
+#interests {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 50px;
+    padding: 0 24px;
+}
+
+/*UNDERSTNADDDDDDD*/
+@media (min-width: 1100px) {
+    #interests {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+#interests .interests-header {
+    grid-column: 1 / -1;
+}
+
 .glass-card {
     align-items: center;
-    width: 400px;
-    margin-top: 20px;
-    margin-right: auto; 
-    margin-bottom: 50px; 
-    margin-left: 200px;
+    width: 100%;
+    min-height: 320px;
+    box-sizing: border-box;
+    margin: 0;
     background-color: var(--card-bg);
     border: 1px solid var(--border-box);
-    border-radius: 20px;
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    border-radius: 12px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(2px); /*blurs everything below the about section*/
     opacity: 1;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .glass-card h2 {
@@ -335,7 +351,10 @@ span {
     cursor: pointer;
 }
 
-.modal-music {
+.modal-music,
+.modal-traveling,
+.modal-art,
+.modal-book {
     display: none;
     position: fixed;
     inset: 0;
@@ -382,7 +401,7 @@ span {
 }
 
 /*close button on modal*/
-.closeMusic {
+.close {
     float: right;
     color: var(--navbar-text-hover);
     font-size: 2rem;
@@ -391,7 +410,8 @@ span {
     transition: transform 0.5s ease-in-out;
 }
 
-.closeMusic:hover {
+/*on hover, close buttons expand*/
+.close:hover {
     cursor: pointer;
     transform: scale(1.5);
     font-weight: bold;
@@ -415,6 +435,47 @@ span {
     cursor: pointer;
 }
 
+#topBtn1,
+#topBtn2,
+#topBtn3,
+#topBtn4 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgba(91, 199, 214, 0.5);; /* Set a background color */
+  color: white; /* Text color */
+  font-weight: bold;
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  font-family: "Comfortaa", sans-serif;
+  backdrop-filter: blur(4px);
+}
+
+#topBtn1:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+  cursor: pointer; /* Add a mouse pointer on hover */
+}
+
+#topBtn2:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+  cursor: pointer; /* Add a mouse pointer on hover */
+}
+
+#topBtn3:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+  cursor: pointer; /* Add a mouse pointer on hover */
+}
+
+#topBtn4:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+  cursor: pointer; /* Add a mouse pointer on hover */
+}
+
 .spotify {
     width: 80%;
     margin: 0 auto;
@@ -430,6 +491,117 @@ span {
     margin-top: 100px;
     position: relative;
     top: -100px;
+}
+
+/*Traveling modal*/
+p.hawaii {
+    margin-left: 60px;
+}
+p.paris {
+    margin-left: 60px;
+}
+p.disney {
+    margin-left: 60px;
+}
+p.watkins {
+    margin-left: 60px;
+}
+p.venice {
+    margin-left: 60px;
+}
+h3.hawaii {
+    margin-left: 120px;
+    width: 762px;
+    font-size: 1.1rem;
+    font-family: "Stack Sans Headline", sans-serif;
+    font-weight: 1000;
+    background: linear-gradient(-90deg, var(--scrollbar-base-3), var(--scrollbar-base-4));
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+}
+h3.paris {
+    margin-left: 120px;
+    margin-top: 30px;
+    width: 762px;
+    font-size: 1.1rem;
+    font-family: "Stack Sans Headline", sans-serif;
+    font-weight: 1000;
+    background: linear-gradient(-90deg, var(--scrollbar-base-3), var(--scrollbar-base-4));
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+}
+h3.disney {
+    margin-left: 120px;
+    margin-top: 30px;
+    width: 762px;
+    font-size: 1.1rem;
+    font-family: "Stack Sans Headline", sans-serif;
+    font-weight: 1000;
+    background: linear-gradient(-90deg, var(--scrollbar-base-3), var(--scrollbar-base-4));
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+}
+h3.watkins {
+    margin-left: 120px;
+    margin-top: 30px;
+    width: 762px;
+    font-size: 1.1rem;
+    font-family: "Stack Sans Headline", sans-serif;
+    font-weight: 1000;
+    background: linear-gradient(-90deg, var(--scrollbar-base-3), var(--scrollbar-base-4));
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+}
+h3.venice {
+    margin-left: 120px;
+    margin-top: 30px;
+    width: 762px;
+    font-size: 1.1rem;
+    font-family: "Stack Sans Headline", sans-serif;
+    font-weight: 1000;
+    background: linear-gradient(-90deg, var(--scrollbar-base-3), var(--scrollbar-base-4));
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+}
+img.hawaii {
+    width: 25%;   
+    float: left;
+    margin-left: 100px;
+    margin-right: 40px;
+    border-radius: 25px;
+}
+img.paris {
+    width: 13%;
+    float: left;
+    margin-left: 100px;
+    margin-right: 40px;
+    border-radius: 25px;
+}
+img.disney {
+    width: 25%;   
+    float: left;
+    margin-left: 100px;
+    margin-right: 40px;
+    border-radius: 25px;
+}
+img.watkins {
+    width: 15%;
+    float: left;
+    margin-left: 100px;
+    margin-right: 40px;
+    border-radius: 25px;
+}
+img.venice {
+    width: 25%;
+    float: left;
+    margin-left: 100px;
+    margin-right: 40px;
+    border-radius: 25px;
 }
 
 /*

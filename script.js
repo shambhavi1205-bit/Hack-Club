@@ -66,37 +66,241 @@ themeSwitch.addEventListener("click", () => {
 //Modal code for "music"
 
 //get the modal
-let modal = document.getElementById("modalMusic");
+let modalOne = document.getElementById("modalMusic");
 
 //get the card element that opens the modal
-let card = document.getElementById("musicCard");
+let cardOne = document.getElementById("musicCard");
 
 //get the <span> element that closes the modal
-let span = document.querySelector(".closeMusic");
+let spanOne = document.getElementById("closeMusic");
 
 //when the user clicks on the card, open the modal
 //when the user clicks on the card element, run the code inside the curly braces
-card.onclick = 
+cardOne.onclick = 
 //a block of code that stays dormant until triggered by a click
 function() {
    //gets the CSS styling of "modal" and changes it to a block so that the modal can be seen
-   modal.style.display = "block";
+   modalOne.style.display = "block";
 }
 
 //when the user clicks on <span> (x), close the modal
 //when the user clicks on the x, run the code inside the curly braces
-span.onclick = function() {
+spanOne.onclick = function() {
    //the CSS display returns to none so that the modal is not seen
-   modal.style.display = "none";
+   modalOne.style.display = "none";
 }
 
 //when the user clicks anywhere outside of the modal, close it
 //listens for a click anywhere on the entire browser window
-window.onclick = 
+window.addEventListener("click",
 //gives us an event object that contains information about the click
 function(event) {
    //"==" checks if the target of the click is the modal; if so, the modal closes
-   if (event.target == modal) {
-      modal.style.display = "none";
+   if (event.target == modalOne) {
+      modalOne.style.display = "none";
    }
+});
+
+
+//Modal code for "traveling"
+
+//get the modal
+let modalTwo = document.getElementById("modalTraveling");
+
+//get the card element that opens the modal
+let cardTwo = document.getElementById("travelingCard");
+
+//get the <span> element that closes the modal
+let spanTwo = document.getElementById("closeTraveling");
+
+//when the user clicks on the card, open the modal
+//when the user clicks on the card element, run the code inside the curly braces
+cardTwo.onclick = 
+//a block of code that stays dormant until triggered by a click
+function() {
+   //gets the CSS styling of "modal" and changes it to a block so that the modal can be seen
+   modalTwo.style.display = "block";
 }
+
+//when the user clicks on <span> (x), close the modal
+//when the user clicks on the x, run the code inside the curly braces
+spanTwo.onclick = function() {
+   //the CSS display returns to none so that the modal is not seen
+   modalTwo.style.display = "none";
+}
+
+//when the user clicks anywhere outside of the modal, close it
+//listens for a click anywhere on the entire browser window
+window.addEventListener("click",
+//gives us an event object that contains information about the click
+function(event) {
+   //"==" checks if the target of the click is the modal; if so, the modal closes
+   if (event.target == modalTwo) {
+      modalTwo.style.display = "none";
+   }
+});
+
+//Modal code for "art"
+
+//get the modal
+let modalThree = document.getElementById("modalArt");
+
+//get the card element that opens the modal
+let cardThree = document.getElementById("artCard");
+
+//get the <span> element that closes the modal
+let spanThree = document.getElementById("closeArt");
+
+//when the user clicks on the card, open the modal
+//when the user clicks on the card element, run the code inside the curly braces
+cardThree.onclick = 
+//a block of code that stays dormant until triggered by a click
+function() {
+   //gets the CSS styling of "modal" and changes it to a block so that the modal can be seen
+   modalThree.style.display = "block";
+}
+
+//when the user clicks on <span> (x), close the modal
+//when the user clicks on the x, run the code inside the curly braces
+spanThree.onclick = function() {
+   //the CSS display returns to none so that the modal is not seen
+   modalThree.style.display = "none";
+}
+
+//when the user clicks anywhere outside of the modal, close it
+//listens for a click anywhere on the entire browser window
+window.addEventListener("click",
+//gives us an event object that contains information about the click
+function(event) {
+   //"==" checks if the target of the click is the modal; if so, the modal closes
+   if (event.target == modalThree) {
+      modalThree.style.display = "none";
+   }
+});
+
+//Modal code for "books"
+
+//get the modal
+let modalFour = document.getElementById("modalBook");
+
+//get the card element that opens the modal
+let cardFour = document.getElementById("bookCard");
+
+//get the <span> element that closes the modal
+let spanFour = document.getElementById("closeBook");
+
+//when the user clicks on the card, open the modal
+//when the user clicks on the card element, run the code inside the curly braces
+cardFour.onclick = 
+//a block of code that stays dormant until triggered by a click
+function() {
+   //gets the CSS styling of "modal" and changes it to a block so that the modal can be seen
+   modalFour.style.display = "block";
+}
+
+//when the user clicks on <span> (x), close the modal
+//when the user clicks on the x, run the code inside the curly braces
+spanFour.onclick = function() {
+   //the CSS display returns to none so that the modal is not seen
+   modalFour.style.display = "none";
+}
+
+//when the user clicks anywhere outside of the modal, close it
+//listens for a click anywhere on the entire browser window
+window.addEventListener("click",
+//gives us an event object that contains information about the click
+function(event) {
+   //"==" checks if the target of the click is the modal; if so, the modal closes
+   if (event.target == modalFour) {
+      modalFour.style.display = "none";
+   }
+});
+
+//scroll back to top btns
+
+//finds the scrollable modal containing the btn
+let topbutton1 = document.getElementById("topBtn1");
+let modalContent1 = topbutton1.closest(".modal-content");
+
+// When the user scrolls down 20px in the modal, show the button
+modalContent1.onscroll = function() {scrollFunction1()};
+
+function scrollFunction1() {
+   if (modalContent1.scrollTop > 20) {
+    topbutton1.style.display = "block";
+  } else {
+    topbutton1.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction1() {
+   modalContent1.scrollTo({top: 0, behavior: "smooth"});
+}
+
+//scroll back to top btn #2
+
+//finds the scrollable modal containing the btn
+let topbutton2 = document.getElementById("topBtn2");
+let modalContent2 = topbutton2.closest(".modal-content");
+
+// When the user scrolls down 20px in the modal, show the button
+modalContent2.onscroll = function() {scrollFunction2()};
+
+function scrollFunction2() {
+   if (modalContent2.scrollTop > 20) {
+    topbutton2.style.display = "block";
+  } else {
+    topbutton2.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction2() {
+   modalContent2.scrollTo({top: 0, behavior: "smooth"});
+}
+
+//scroll back to top btn #3
+
+//finds the scrollable modal containing the btn
+let topbutton3 = document.getElementById("topBtn3");
+let modalContent3 = topbutton3.closest(".modal-content");
+
+// When the user scrolls down 20px in the modal, show the button
+modalContent3.onscroll = function() {scrollFunction3()};
+
+function scrollFunction3() {
+   if (modalContent3.scrollTop > 20) {
+    topbutton3.style.display = "block";
+  } else {
+    topbutton3.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction3() {
+   modalContent3.scrollTo({top: 0, behavior: "smooth"});
+}
+
+//scroll back to top btn #4
+
+//finds the scrollable modal containing the btn
+let topbutton4 = document.getElementById("topBtn4");
+let modalContent4 = topbutton4.closest(".modal-content");
+
+// When the user scrolls down 20px in the modal, show the button
+modalContent4.onscroll = function() {scrollFunction4()};
+
+function scrollFunction4() {
+   if (modalContent4.scrollTop > 20) {
+    topbutton4.style.display = "block";
+  } else {
+    topbutton4.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction4() {
+   modalContent4.scrollTo({top: 0, behavior: "smooth"});
+}
+

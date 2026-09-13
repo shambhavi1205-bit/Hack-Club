@@ -59,12 +59,13 @@
             <!--clickable music card that opens up music modal-->
             <div id="musicCard" class="glass-card">
                 <h2>Music</h2>
-                <p>Music is a passion I am working on developing. I think it helps me express myself and connect with others over a beautiful melody. My main instrument is the clarinet, but I also play tenor saxophone and I am learning to play guitar a tiny bit.</p>
+                <p>Music is a passion I am working on developing. I think it helps me express myself and connect with others. My main instrument is the clarinet, but I also play tenor saxophone and I am learning to play guitar a little bit.</p>
             </div>
 
             <div id="modalMusic" class="modal-music">
                 <div class="modal-content">
-                    <span class="closeMusic">&times;</span>
+                    <span id="closeMusic" class="close">&times;</span>
+                    <button onclick="topFunction1 ()" id="topBtn1">Scroll to top</button>
                     <h1>Music</h1>
                     <p>Music is one of my favorite getaways! I started playing the clarinet in 5th grade when I had the option to choose 
                         an instrument. Before this opportunity, I had no experience with music and I struggled to grasp the concept
@@ -84,18 +85,83 @@
                     </div>
                 </div>
             </div>
-        </div>
                     
-            <!--clickable art card that opens up art modal
-                <div id="musicCard" class="glass-card">
-                    <h2>Music</h2>
-                    <p>Click to learn more about my love for music!</p>
+            <!--clickable traveling card that opens up traveling modal-->
+                <div id="travelingCard" class="glass-card">
+                    <h2>Traveling</h2>
+                    <p>I love traveling with my parents, usually to new places! We usually prefer to explore cities and natural
+                        settings by foot when it's possible. I also have a hobby of collecting a magnet of every place we visit that 
+                        I like, which can sometimes get annoying, but...that's me.😁 
+                    </p>
                 </div>
 
-                <div id="modalMusic" class="modal-music">
+                <div id="modalTraveling" class="modal-traveling">
                     <div class="modal-content">
-                        <span class="closeMusic">&times;</span>
-                        <h1>Music</h1>
+                        <span id="closeTraveling"class="close">&times;</span>
+                        <button onclick="topFunction2 ()" id="topBtn2">Scroll to top</button>
+                        <h1>Traveling</h1>
+                        <p class="intro">I absolutely love going places and exploring new cultures and sights! 
+                            I always travel with my family and if we are bored on the weekends, we just go
+                            on day trips. Sometimes, though, we like going on big trips. Honestly, when we 
+                            come back home, it feels like we never went and that we have to search for another
+                            plac to go to! Below you will find reviewes of some places I've been to!</p>
+                        <h3 class="hawaii">Hawaii, United States</h3>
+                        <img class="hawaii" src="https://lh3.googleusercontent.com/gm8uru_fSFU4S07IIk_CqNeEM7cfHZVUyRne1jikuxcQRCDTsizQG4cnnXSQZbXvvu9tAUQ3X0yNNXBNdgXcLT5XtWtfXbfDh97EqpyIdRekVaZ36CU=w1920-h1080-n" alt="Picture of O'ahu and the mountains and water">
+                        <p class="hawaii">Hawaii is definitely my favorite place I've visited so far; I went 
+                            to O'ahu and the Big Island! There is so much to do, with activities for every type of person like:
+                            hikes, beaches, farms (macadamia nuts, pineapple, coffee, etc) farmer's markets, gift shops, restaurants...
+                            and even more! The view on both islands was breathtaking with the mountains, volcano (on the Big Island!), 
+                            stargazing, and the natural scenery during drives! If you are looking for an adventurous trip or a 
+                            relaxing vacation, I would totally recommend Hawaii!</p>
+                        <h3 class="paris">Paris, France</h3>
+                        <img class="paris" src="https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2023/10/Best-Things-To-Do-In-Paris-France-23.jpg?resize=1000%2C1500&ssl=1" alt="Picture of Eiffel Tower">
+                        <p class="paris">I feel like I can go to Paris a million times! It is sooo full of rich culture...and even more
+                            amazing food! There are many shops, bakeries, architecture, etc. But wait! If you are an 
+                            art lover like me - or even if you aren't - there is so much art to appreciate! Be sure to check out the 
+                            Louvre museum if you are not short on time. A city like Paris is truly special!</p>
+                        <h3 class="disney">Disney World, United States</h3>
+                        <img class="disney" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/dc/6d/64/cinderella-s-castle-at.jpg?w=1200&h=-1&s=1" alt="picture of Animal Kingdom in Disney World">
+                        <p class="disney">Disney is the ultimate place for fun and to feel like a kid! There are so many 
+                            rides for everyone, and I know that because I do NOT like rollercoasters! The Magic Kingdom is a 
+                            magical time with princess visits and classic character rides. The Animal Kindgom boasts many 
+                            different animals with real-live animal shows! Get ready to spend an awesome vacation!</p>
+                        <h3 class="watkins">Watkins Glen State Park, NY, United States</h3>
+                        <img class="watkins" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiv6XRTAYARl7ztj13MXwunbKPJhUGBbVn_tPtaSTzZw&s=10" alt="picture of Watkins Glen-a waterfall">
+                        <p class="watkins">Watkins Glen! Trips always don't have to be extremely famous cities...I like
+                            nature, too! Watkins Glen State Park is a beautifuly hiking gorge with many waterfalls along
+                            the way, including a Rainbow falls where you can actually get wet by the spray of water! The
+                            hike is easy on a sort-of smooth rock trail where millions of people walk every year. You can 
+                            choose to do multiple trails, the whole trail, or walk a little bit and just come back. Either
+                            way, there is natural beauty in this place!
+                        <h3 class="venice">Venice, Italy</h3>
+                        <img class="venice" src="https://cdn.sanity.io/images/nxpteyfv/goguides/0b61501b578f06a2067e15dbf9b5e2a010712803-1600x1066.jpg" alt="picture of a canal in Venice">
+                        <p class="venice">I am honestly still mesmerized by Venice. It is so cool to think that it is a city of canals,
+                            with no other means of transportation (besides walking ofc)! When I stepped on the cobblestone streets,
+                            I was literally wowed. There were so many cute shops on either sides wherever I walked, and the small bridge
+                            above canals were great spots to take pictures. The plaza with the basilica (St. Mark's Square) was also 
+                            breathtaking in the sunset, especially with bustling tourists and people waiting for gondola rides. We did a
+                            gondola ride right at noon, so that the water sparkled...and it was a little hot, but that's okay! Venice is a
+                            must-visit city for anyone!
+                        </p>
+                    </div>
+                </div>
+
+            <!--clickable art card that opens up art modal-->
+                <div id="artCard" class="glass-card">
+                    <h2>Art</h2>
+                    <p>I think I have loved art since I was young. I know that my mom taught me how to draw many things
+                        like flowers and birds when I was young, but I didn't particualarly enjoy it. Then, when I was in 1st
+                        and 2nd grade, I moved on to those cute figures with big eyes. But I began to show interest in sketching
+                        when I was 9, so I worked on that for a couple of years. Now, I love to sketch realistic things and work
+                        with resin. 
+                    </p>
+                </div>
+
+                <div id="modalArt" class="modal-art">
+                    <div class="modal-content">
+                        <span id="closeArt"class="close">&times;</span>
+                        <button onclick="topFunction3 ()" id="topBtn3">Scroll to top</button>
+                        <h1>Art</h1>
                         <p>Music is one of my favorite getaways! I started playing the clarinet in 5th grade when I had the option to choose 
                             an instrument. Before this opportunity, I had no experience with music and I struggled to grasp the concept
                             of notes in music class! Soon enough, I was going to my first NYSSMA, where I recieved an outstanding on my solo!<br><br>
@@ -108,11 +174,38 @@
                             Even though I love instruments, I also like singing just for fun and listening to music. My favorite genre is pop music, as I listen to artists 
                             such as Taylor Swift, Olivia Rodrigo, Tate McRae, and Demi Lovato (ofc there are more!). Take a look below at some of my Spotify playlists!!!</p>
                     </div>
-                        <div class="spotify">
-                            <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/playlist/5yfyXp86CzsWFBLhazsYyz?utm_source=generator&si=5bdb3f032518448d" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                            <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/playlist/2XRkcRXCmcxph8xBhBeBCE?utm_source=generator&si=125e341a1fe74c2b" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1fnbCpymXUmzuJQ0CtxvdR?utm_source=generator&si=4be87766e2ce4260" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                        </div>
+                </div>
+
+            <!--clickable book card that opens up book modal-->
+                <div id="bookCard" class="glass-card">
+                    <h2>Books</h2>
+                    <p>Reading might be my go-to choice for a sunny day, rainy day, snowy day...actually any day! I got into reading books when I was in 2nd grade, starting with Rainbow Magic and Puppy Place! (Don't laugh!😊) Now, I read a broad range of genres from realistic fiction to historical fiction to mystery/thriller. Here are some of my favorites!</p>
+                </div>
+
+                <div id="modalBook" class="modal-book">
+                    <div class="modal-content">
+                        <span id="closeBook"class="close">&times;</span>
+                        <button onclick="topFunction4 ()" id="topBtn4">Scroll to top</button>
+                        <h1>Books</h1>
+                        <p>Music is one of my favorite getaways! I started playing the clarinet in 5th grade when I had the option to choose 
+                            an instrument. Before this opportunity, I had no experience with music and I struggled to grasp the concept
+                            of notes in music class! Soon enough, I was going to my first NYSSMA, where I recieved an outstanding on my solo!<br><br>
+                            Going into 6th grade, I went strong into band with my clarinet, and also decided to join choir, which I loved immediately.
+                            My choir sang in our area's Choir Festival, which was a truly amazing experience. In 7th grade, I also auditioned
+                            for my school's select choir, which I was accepted into.<br><br>
+                            For me, 8th grade was my most musicaly year. I picked up tenor saxophone because it was so similar to clarinet.
+                            With it, I played in jazz band and was also accepted into my area's select jazz band, which was soooo fun and exciting!
+                            With my clarinet, I was accepted into my area's select band, and I played outside of school in a great instrument organization.<br><br>
+                            Even though I love instruments, I also like singing just for fun and listening to music. My favorite genre is pop music, as I listen to artists 
+                            such as Taylor Swift, Olivia Rodrigo, Tate McRae, and Demi Lovato (ofc there are more!). Take a look below at some of my Spotify playlists!!!</p>
+                    </div>
+                </div>
+
+        </div>
+
+
+
+                        
     
                         
                         
