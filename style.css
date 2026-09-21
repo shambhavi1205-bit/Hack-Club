@@ -262,8 +262,11 @@ span {
    
 }
 
-/*about section heading*/
-.about-header{
+/*all of the headers*/
+.about-header,
+.interests-header,
+.projects-header,
+.achievements-header {
     width: 762px;
     margin: 20px auto 0 200px;
     font-size: 3rem;
@@ -276,17 +279,16 @@ span {
     text-align: center;
 }
 
-/*interests section heading*/
-.interests-header {
+.contact-header {
     width: 762px;
-    margin: 20px auto 0 200px;
+    margin: 20px auto 0;
     font-size: 3rem;
     font-family: "Stack Sans Headline", sans-serif;
     font-weight: 1000;
     background: linear-gradient(-90deg, var(--title));
     background-clip: text;
     color: transparent;
-    background-size: 200% auto;
+    background-size: 100% auto;
     text-align: center;
 }
 
@@ -325,6 +327,12 @@ span {
     backdrop-filter: blur(2px); /*blurs everything below the about section*/
     opacity: 1;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out
+}
+
+.glass-card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 .glass-card h2 {
@@ -347,7 +355,6 @@ span {
 
 /*when the user hovers over the text to get the modal*/
 .glass-card p:hover {
-    color: var(--navbar-text-hover);
     cursor: pointer;
 }
 
@@ -400,6 +407,62 @@ span {
     padding: 2px 100px 50px 50px;
 }
 
+/*the images in the art modal*/
+#modalArt .modal-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding-top: 6rem;
+    box-sizing: border-box;
+}
+#modalArt .modal-content img {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+}
+
+#modalArt .art-img {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+#modalArt .art-overlay {
+    position: absolute;
+    inset: 0;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: rgb(144, 98, 125);
+    font-weight: bold;
+    font-family: "Comfortaa", sans-serif;
+}
+
+#modalArt .art-img:hover .art-overlay {
+    opacity: 1;
+    transition-duration: 1.2s;
+}
+
+#modalArt .close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
 /*close button on modal*/
 .close {
     float: right;
@@ -446,7 +509,7 @@ span {
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: rgba(91, 199, 214, 0.5);; /* Set a background color */
+  background-color: rgba(91, 199, 214, 0.5); /* Set a background color */
   color: white; /* Text color */
   font-weight: bold;
   padding: 15px; /* Some padding */
@@ -509,6 +572,15 @@ p.watkins {
 p.venice {
     margin-left: 60px;
 }
+p.banff {
+    margin-left: 60px;
+}
+p.barcelona {
+    margin-left: 60px;
+}
+p.sintra {
+    margin-left: 60px;
+}
 h3.hawaii {
     margin-left: 120px;
     width: 762px;
@@ -568,6 +640,42 @@ h3.venice {
     color: transparent;
     background-size: 200% auto;
 }
+h3.banff {
+    margin-left: 120px;
+    margin-top: 30px;
+    width: 762px;
+    font-size: 1.1rem;
+    font-family: "Stack Sans Headline", sans-serif;
+    font-weight: 1000;
+    background: linear-gradient(-90deg, var(--scrollbar-base-3), var(--scrollbar-base-4));
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+}
+h3.barcelona {
+    margin-left: 120px;
+    margin-top: 30px;
+    width: 762px;
+    font-size: 1.1rem;
+    font-family: "Stack Sans Headline", sans-serif;
+    font-weight: 1000;
+    background: linear-gradient(-90deg, var(--scrollbar-base-3), var(--scrollbar-base-4));
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+}
+h3.sintra {
+    margin-left: 120px;
+    margin-top: 30px;
+    width: 762px;
+    font-size: 1.1rem;
+    font-family: "Stack Sans Headline", sans-serif;
+    font-weight: 1000;
+    background: linear-gradient(-90deg, var(--scrollbar-base-3), var(--scrollbar-base-4));
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+}
 img.hawaii {
     width: 25%;   
     float: left;
@@ -603,64 +711,154 @@ img.venice {
     margin-right: 40px;
     border-radius: 25px;
 }
+img.banff {
+    width: 25%;
+    float: left;
+    margin-left: 100px;
+    margin-right: 40px;
+    border-radius: 25px;
+}
+img.barcelona {
+    width: 25%;
+    float: left;
+    margin-left: 100px;
+    margin-right: 40px;
+    border-radius: 25px;
+}
+img.sintra {
+    width: 25%;
+    float: left;
+    margin-left: 100px;
+    margin-right: 40px;
+    border-radius: 25px;
+}
+
+/*Book modal content*/
+p.games {
+    margin-left: 60px;
+}
+h3.games {
+    text-align: center;
+    margin-left: 133px;
+    width: 762px;
+    font-size: 1.1rem;
+    font-family: "Stack Sans Headline", sans-serif;
+    font-weight: 1000;
+    background: linear-gradient(-90deg, var(--scrollbar-base-3), var(--scrollbar-base-4));
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+}
+img.games {
+    width: 15%;
+    float: left;
+    margin-left: 100px;
+    margin-right: 40px;
+    border-radius: 25px;
+}
+p.sunkissed {
+    margin-left: 60px;
+}
+h3.sunkissed {
+    text-align: center;
+    margin-left: 40px;
+    width: 762px;
+    font-size: 1.1rem;
+    font-family: "Stack Sans Headline", sans-serif;
+    font-weight: 1000;
+    background: linear-gradient(-90deg, var(--scrollbar-base-3), var(--scrollbar-base-4));
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+}
+img.sunkissed {
+    width: 15%;
+    float: left;
+    margin-left: 100px;
+    margin-right: 40px;
+    border-radius: 25px;
+}
+p.my-life {
+    margin-left: 60px;
+}
+h3.my-life {
+    text-align: center;
+    margin-left: 110px;
+    width: 762px;
+    font-size: 1.1rem;
+    font-family: "Stack Sans Headline", sans-serif;
+    font-weight: 1000;
+    background: linear-gradient(-90deg, var(--scrollbar-base-3), var(--scrollbar-base-4));
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+}
+img.my-life {
+    width: 15%;
+    float: left;
+    margin-left: 100px;
+    margin-right: 40px;
+    border-radius: 25px;
+}
+
+/*Projects section*/
+.glass-card2 {
+    width: 30%;
+    min-height: 320px;
+    box-sizing: border-box;
+    margin-left: 2rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-box);
+    border-radius: 12px;
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    backdrop-filter: blur(2px); /*blurs everything below the about section*/
+    opacity: 1;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out
+}
+
+.glass-card2:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+h4.projects {
+    font-size: 1.5rem;
+    font-family: "Silkscreen";
+    font-weight: 2;
+    color: gray;
+}
+
+h5.projects {
+    font-family: "Stack Sans Headline", sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
 
 /*
-h1.website {
-    color: rgb(81, 97, 99);
-
-    text-align: center;
-
-    text-decoration: underline;
-    text-decoration-style:wavy;
-    text-decoration-thickness: 1.75px;
-    text-decoration-color: rgb(152, 198, 204);
-
-    text-shadow: 2px 2px 2px rgb(173, 231, 238);
-
-    opacity: 0.6;
-    margin-top: 90px;
-    margin-bottom: 20px;
-    margin-right: 300px;
-    margin-left: 800px;
-
-    font-family: "Patrick Hand SC", cursive;
-    text-transform: uppercase;
-
-    letter-spacing: 4px;
-    word-spacing: 3px;
-
-    font-size: 40px;
+.glass-card h2 {
+    font-family: "Stack Sans Headline", sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--scrollbar-base-2);
 }
 
-p.intro{
-    color: rgb(49, 115, 124);
-    opacity: 0.8;
-
-    margin-bottom:600px;
-    margin-right: 300px;
-    margin-left: 900px;
-
-    font-family: "Patrick Hand", cursive;
-    line-height: 2;
-
-    font-size: 21px;
-}
-
-.footer {
-    text-align: center;
-    margin-left: 500px;
-    margin-right: 500px;
-
-    font-family: "Patrick Hand SC", cursive;
-    text-transform: uppercase;
-    font-size: 20px;
+.glass-card p{
+    font-family: "Comfortaa", sans-serif;
+    font-size: 1.1rem;
     font-weight: bold;
-
-    color: rgb(81, 97, 99);
-    opacity: 0.8;
-
-    position: relative;
-    bottom: -150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--scrollbar-base-1);
 }
+
+/*when the user hovers over the text to get the modal*/
+.glass-card p:hover {
+    
 
 
