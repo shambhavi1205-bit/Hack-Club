@@ -804,14 +804,16 @@ img.my-life {
 /*Projects section*/
 .glass-card2 {
     width: 30%;
-    min-height: 320px;
+    min-height: 100px;
     box-sizing: border-box;
     margin-left: 2rem;
     background-color: var(--card-bg);
     border: 1px solid var(--border-box);
     border-radius: 12px;
     padding-left: 24px;
-    display: flex;
+    padding-right: 24px;
+    display: inline-flex;
+    vertical-align: top;
     flex-direction: column;
     justify-content: center;
     backdrop-filter: blur(2px); /*blurs everything below the about section*/
@@ -821,7 +823,6 @@ img.my-life {
 }
 
 .glass-card2:hover {
-    cursor: pointer;
     transform: scale(1.05);
 }
 
@@ -836,7 +837,43 @@ h5.projects {
     font-family: "Stack Sans Headline", sans-serif;
     font-size: 1.5rem;
     text-align: center;
+    color: var(--scrollbar-base-2);
+    position: relative;
+    top: -50px;
 }
+
+p.projects {
+    font-family: "Stack Sans Headline", sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--scrollbar-base-1);
+    margin-top: -70px;
+    margin-bottom: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 1.5;
+}
+
+.links a {
+    font-family: "Nanum Gothic", sans serif;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: rgba(91, 199, 214, 0.5);
+    opacity: 0;
+    text-align: center;
+    padding-top: 10px;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.glass-card2:hover .links a {
+    opacity: 1;
+}
+
+.glass-card2 .links a:hover {
+    color: rgba(91, 199, 214, 1);
+}
+
 
 /*
 .glass-card h2 {
@@ -857,8 +894,6 @@ h5.projects {
     color: var(--scrollbar-base-1);
 }
 
-/*when the user hovers over the text to get the modal*/
+/*when the user hovers over the text to get the modal
 .glass-card p:hover {
     
-
-
