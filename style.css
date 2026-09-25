@@ -225,10 +225,7 @@ span {
 /*the about glass card*/
 .about {
     width: 700px;
-    margin-top: 20px;
-    margin-right: auto; 
-    margin-bottom: 20px; 
-    margin-left: 200px;
+    margin: 20px auto 0;
     background-color: var(--card-bg);
     border: 1px solid var(--border-box);
     border-radius: 20px;
@@ -266,9 +263,10 @@ span {
 .about-header,
 .interests-header,
 .projects-header,
-.achievements-header {
+.achievements-header,
+.contact-header {
     width: 762px;
-    margin: 20px auto 0 200px;
+    margin: 20px auto 0;
     font-size: 3rem;
     font-family: "Stack Sans Headline", sans-serif;
     font-weight: 1000;
@@ -279,31 +277,12 @@ span {
     text-align: center;
 }
 
-.contact-header {
-    width: 762px;
-    margin: 20px auto 0;
-    font-size: 3rem;
-    font-family: "Stack Sans Headline", sans-serif;
-    font-weight: 1000;
-    background: linear-gradient(-90deg, var(--title));
-    background-clip: text;
-    color: transparent;
-    background-size: 100% auto;
-    text-align: center;
-}
-
 #interests {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 50px;
-    padding: 0 24px;
-}
-
-/*UNDERSTNADDDDDDD*/
-@media (min-width: 1100px) {
-    #interests {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: min(820px, calc(100% - 48px));
+    margin: 0 auto;
 }
 
 #interests .interests-header {
@@ -313,7 +292,8 @@ span {
 .glass-card {
     align-items: center;
     width: 100%;
-    min-height: 320px;
+    aspect-ratio: 4 / 3;
+    min-height: 0;
     box-sizing: border-box;
     margin: 0;
     background-color: var(--card-bg);
@@ -356,6 +336,24 @@ span {
 /*when the user hovers over the text to get the modal*/
 .glass-card p:hover {
     cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    #interests {
+        grid-template-columns: 1fr;
+    }
+
+    .glass-card {
+        padding: 16px;
+    }
+
+    .glass-card h2 {
+        font-size: clamp(1.25rem, 6vw, 1.75rem);
+    }
+
+    .glass-card p {
+        font-size: clamp(0.8rem, 3.5vw, 1rem);
+    }
 }
 
 .modal-music,
@@ -802,18 +800,26 @@ img.my-life {
 }
 
 /*Projects section*/
+.projects-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
 .glass-card2 {
-    width: 30%;
-    min-height: 100px;
+    flex: 1 1 0;
+    max-width: 360px;
+    min-height: 320px;
     box-sizing: border-box;
-    margin-left: 2rem;
+    margin: 0;
+    position: relative;
     background-color: var(--card-bg);
     border: 1px solid var(--border-box);
     border-radius: 12px;
-    padding-left: 24px;
-    padding-right: 24px;
-    display: inline-flex;
-    vertical-align: top;
+    padding: 52px 24px 24px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     backdrop-filter: blur(2px); /*blurs everything below the about section*/
@@ -831,15 +837,18 @@ h4.projects {
     font-family: "Silkscreen";
     font-weight: 2;
     color: gray;
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    margin: 0;
 }
 
 h5.projects {
     font-family: "Stack Sans Headline", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
     color: var(--scrollbar-base-2);
-    position: relative;
-    top: -50px;
+    margin: 0 0 16px;
 }
 
 p.projects {
@@ -847,10 +856,8 @@ p.projects {
     font-size: 1rem;
     text-align: center;
     color: var(--scrollbar-base-1);
-    margin-top: -70px;
-    margin-bottom: 0;
-    padding-left: 40px;
-    padding-right: 40px;
+    margin: 0;
+    padding: 0;
     line-height: 1.5;
 }
 
@@ -864,6 +871,7 @@ p.projects {
     text-align: center;
     padding-top: 10px;
     transition: color 0.2s ease, opacity 0.2s ease;
+    font-size: 1rem;
 }
 
 .glass-card2:hover .links a {
