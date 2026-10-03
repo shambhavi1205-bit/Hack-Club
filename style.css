@@ -907,10 +907,9 @@ p.projects {
 */
 
 .carousel {
-    margin: 100px auto;
+    margin: 40px auto 20px;
     width: 65%;
-    display: flex;
-    overflow-x: auto;
+    overflow: hidden;
         -webkit-mask-image: linear-gradient(
         to right,
         transparent,
@@ -927,20 +926,22 @@ p.projects {
     );
 }
 
-.carousel:hover .group{
+.carousel:hover .track {
     animation-play-state: paused;
 }
 
-.carousel::-webkit-scrollbar {
-    display: none;
+.track {
+    display: flex;
+    width: max-content;
+    animation: spin 50s linear infinite;
 }
 
 .group {
     display: flex;
+    flex: none;
     align-items: center;
     justify-content: center;
     gap: 1em;
-    animation: spin 50s linear infinite;
     padding-right: 1em;
 }
 
@@ -988,6 +989,15 @@ p.projects {
 
 @keyframes spin {
     from {translate: 0;}
-    to {translate: -100%;}
+    to {translate: -50%;}
 }
-    
+   
+.gmail {
+    width: 5rem;
+    margin-left: 50px;
+}
+
+.github {
+    width: 5rem;
+    margin-right: 50px;
+}
