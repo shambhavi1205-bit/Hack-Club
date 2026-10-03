@@ -904,4 +904,90 @@ p.projects {
 
 /*when the user hovers over the text to get the modal
 .glass-card p:hover {
+*/
+
+.carousel {
+    margin: 100px auto;
+    width: 65%;
+    display: flex;
+    overflow-x: auto;
+        -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+}
+
+.carousel:hover .group{
+    animation-play-state: paused;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 50s linear infinite;
+    padding-right: 1em;
+}
+
+.card {
+    box-sizing: border-box;
+    flex: 0 0 18rem;
+    width: 18rem;
+    height: 18rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-box);
+    border-radius: 1rem;
+    text-align: center;
+    backdrop-filter: blur(2px); /*blurs everything below the about section*/
+}
+
+.card h5 {
+    margin: 0 0 .5rem;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    color: var(--scrollbar-base-2);
+    font-family: "Stack Sans Headline", sans-serif;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.card h6 {
+    margin: 0 0 .5rem;
+    font-size: .9rem;
+    color: rgb(50, 139, 159);
+    padding-bottom: 10px;
+}
+
+.card p {
+    margin: 0;
+    font-size: .875rem;
+    line-height: 1.4;
+    color: var(--scrollbar-base-1);
+    font-family: "Stack Sans Headline", sans-serif;
+}
+
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
     
