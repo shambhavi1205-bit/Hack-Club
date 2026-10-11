@@ -36,8 +36,17 @@
     --auto-typing-text: rgb(121, 173, 180); /*auto typing text base*/
     --auto-typing-shadow: rgb(192, 247, 253); /*auto typing text shadow*/
     --title: rgb(169, 118, 149), rgb(123, 92, 137), rgb(60, 152, 164), rgb(61, 171, 166), rgb(169, 118, 149); /*title gradient*/
-    --card-bg: white 0.4; /*about card bg*/
+    --card-bg: rgba(255, 255, 255, 0.2); /*about card bg*/
     --border-box: white; /*card borders*/
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .darkmode .type { /*"I am" text color in dark mode*/
@@ -46,12 +55,32 @@
 
 html {
     scroll-behavior: smooth; /*allows the anchor links to scroll smoothly to sections*/
-    scroll-padding-top: 50px; /*leaves 90px of space above the anchor*/
 }
 
 #home,
-section[id] {
+#interests,
+#contact {
     scroll-margin-top: 90px; /*leaves 90px of space above all anchors*/
+}
+
+#about {
+    scroll-margin-top: 360px;
+}
+
+#projects {
+    scroll-margin-top: 260px;
+}
+
+#achievements {
+    scroll-margin-top: 250px;
+}
+
+about-section {
+    min-height: 100vh;
+}
+
+interests-section {
+    min-height: 100vh;
 }
 
 /*sets the background color and topographic img*/
@@ -267,6 +296,7 @@ span {
 .contact-header {
     width: 762px;
     margin: 20px auto 0;
+    margin-bottom: 30px;
     font-size: 3rem;
     font-family: "Stack Sans Headline", sans-serif;
     font-weight: 1000;
@@ -809,7 +839,6 @@ img.my-life {
 }
 
 .glass-card2 {
-    flex: 1 1 0;
     max-width: 360px;
     min-height: 320px;
     box-sizing: border-box;
@@ -822,9 +851,8 @@ img.my-life {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    backdrop-filter: blur(2px); /*blurs everything below the about section*/
+    backdrop-filter: blur(2px);
     opacity: 1;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out
 }
 
@@ -882,30 +910,6 @@ p.projects {
     color: rgba(91, 199, 214, 1);
 }
 
-
-/*
-.glass-card h2 {
-    font-family: "Stack Sans Headline", sans-serif;
-    font-size: 2rem;
-    font-weight: 500;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: var(--scrollbar-base-2);
-}
-
-.glass-card p{
-    font-family: "Comfortaa", sans-serif;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: var(--scrollbar-base-1);
-}
-
-/*when the user hovers over the text to get the modal
-.glass-card p:hover {
-*/
-
 .carousel {
     margin: 40px auto 20px;
     width: 65%;
@@ -915,14 +919,14 @@ p.projects {
         transparent,
         black 10%,
         black 90%,
-        transparent
+        var(--card-bg)
     );
     mask-image: linear-gradient(
         to right,
         transparent,
         black 10%,
         black 90%,
-        transparent
+        var(--card-bg)
     );
 }
 
@@ -955,11 +959,11 @@ p.projects {
     flex-direction: column;
     align-items: center;
     overflow-y: auto;
-    background-color: var(--card-bg);
     border: 1px solid var(--border-box);
     border-radius: 1rem;
     text-align: center;
     backdrop-filter: blur(2px); /*blurs everything below the about section*/
+    opacity: 1;
 }
 
 .card h5 {
@@ -994,10 +998,29 @@ p.projects {
    
 .gmail {
     width: 5rem;
-    margin-left: 50px;
 }
 
 .github {
     width: 5rem;
-    margin-right: 50px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.gmail:hover,
+.github:hover {
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 2px var(--scrollbar-base-3));
+}
+
+p.contact {
+    line-height: 1.4;
+    color: var(--scrollbar-base-1);
+    font-family: "Stack Sans Headline", sans-serif;
+    font-size: 1.35rem;
+    padding-bottom: 50px;
 }
