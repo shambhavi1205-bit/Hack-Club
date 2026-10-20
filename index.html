@@ -40,6 +40,31 @@
             </ul>
         </nav>
 
+        <div id="musicBtn">
+            <button class="music-btn">
+                <img src="images/music-btn.svg" alt="music button icon"/>
+            </button>
+            <div id="musicPlayer" class="musicplayer">
+                <div class="musicplayer-content">
+                    <span id="closeMusicPlayer" class="close">&times;</span>
+                    <h1>Background Music</h1>
+                    <div class="music-container">
+                        <div class="musicplayerrr">
+                            <img class="calm-img" src="images/calm-img.png" alt="calm lake scene"/>
+                            <h6>calm music</h6>
+                            <audio id="song">
+                                <source src="audio/calmguitar.mp3" type="audio/mpeg">
+                            </audio>
+                            <input type="range" value="0" id="progress"/>
+                            <div class="controls">
+                                <div id="ctrlIcon" onclick="playPause()"><img src="icons/play.svg" alt="play button"/></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!--div for the landing/home page-->
         <div class="main">
             <!--container for the title and auto typing text-->
@@ -460,7 +485,6 @@
                 </a>
             </div>
         </section>
-
 
 
         <!--

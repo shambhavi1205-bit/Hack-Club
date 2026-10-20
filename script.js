@@ -17,9 +17,7 @@ function myFunction() {
 }
 
 //creates a variable named "darkmode"
-let darkmode = 
-//
-localStorage.getItem("darkmode")
+let darkmode = localStorage.getItem("darkmode")
 //creates a constant variable named "themeSwitch" 
 const themeSwitch = 
 //finds the HTML element on the page with id="theme-switch"
@@ -304,3 +302,69 @@ function topFunction4() {
    modalContent4.scrollTo({top: 0, behavior: "smooth"});
 }
 
+//Music btn modal
+let musicBtn = document.querySelector (".music-btn");
+
+let musicPlayer = document.getElementById ("musicPlayer");
+
+let closeMusicPlayer = document.getElementById ("closeMusicPlayer");
+
+musicBtn.onclick = function() {
+   musicPlayer.style.display = "block";
+}
+
+closeMusicPlayer.onclick = function() {
+   musicPlayer.style.display = "none";
+}
+
+//when the user clicks anywhere outside of the modal, close it
+//listens for a click anywhere on the entire browser window
+window.addEventListener("click",
+//gives us an event object that contains information about the click
+function(event) {
+   //"==" checks if the target of the click is the modal; if so, the modal closes
+   if (event.target == musicPlayer) {
+      musicPlayer.style.display = "none";
+   }
+});
+
+let progress = document.getElementById("progress");
+
+let song = document.getElementById("song");
+
+let ctrlIcon = document.getElementById("ctrlIcon");
+
+song.onloadedmetadata = function() {
+   progress.max = song.duration;
+   progress.value = song.currentTime;
+}
+
+function playPause (){
+   if(song.paused) {
+      song.play();
+   }
+   else{
+      song.pause();
+   }
+}
+
+song.addEventListener ("play", function() {
+   ctrlIcon.querySelector("img").src = "icons/pause.svg"
+}
+)
+
+song.addEventListener ("pause", function() {
+   ctrlIcon.querySelector("img").src = "icons/play.svg"
+}
+)
+
+if(song.play()) {
+   setInterval(()=>{
+      progress.value = song.currentTime;
+   },500);
+}
+
+progress.onchange = function() {
+   song.play();
+   song.currentTime = progress.value;
+}
