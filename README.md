@@ -33,6 +33,7 @@ I made this website using HTML, CSS, and a tiny bit of JavaScript.
   - When user hovers over the marquee, it stops, allowing the user to read the text
 - Contact section
   - Two image links that bring the user to my email and github page in a separate tab
+- On the modals, as the user starts to scroll down, a scroll back to top button pops up, bringing the user back to the top of the modal so they can click the "x" button
 
 
 #Credits
