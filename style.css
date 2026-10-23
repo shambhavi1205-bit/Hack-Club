@@ -36,7 +36,7 @@
     --auto-typing-text: rgb(121, 173, 180); /*auto typing text base*/
     --auto-typing-shadow: rgb(192, 247, 253); /*auto typing text shadow*/
     --title: rgb(169, 118, 149), rgb(123, 92, 137), rgb(60, 152, 164), rgb(61, 171, 166), rgb(169, 118, 149); /*title gradient*/
-    --card-bg: rgba(255, 255, 255, 0.2); /*about card bg*/
+    --card-bg: rgba(255, 255, 255, 0.107); /*about card bg*/
     --border-box: white; /*card borders*/
 }
 
